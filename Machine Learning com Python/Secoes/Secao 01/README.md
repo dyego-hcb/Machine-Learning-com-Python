@@ -17,8 +17,4 @@ Além das lições teóricas, o curso inclui projetos práticos que permitem apl
 
 Na pasta [Resumo](./Resumos/), você encontrará um resumo detalhado do que foi abordado e realizado na seção 1. Este resumo inclui todos os tópicos importantes, bem como minhas notas pessoais e pensamentos sobre o material do curso.
 
-### Exercícios
-
-Na pasta [Exercicios](./Exercicios/), você encontrará os exercícios propostos que foram resolvidos durante a seção 1. Estes exercícios ajudam a reforçar os conceitos aprendidos e a ganhar prática com a programação em C#.
-
 Espero que você encontre este repositório útil e informativo. Sinta-se à vontade para explorar e aprender!
