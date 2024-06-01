@@ -1,0 +1,9 @@
+-- Resumo da Seção 1: Introdução - Machine Learning com Python --
+
+Nesse curso, iremos abordar de forma teorica e pratica, aplicacoes que realizem acoes de machine learn
+
+As secoes 2 e 3 servirao para passar alguns fundamentos basicos, onde o objetivo e revisar e agregar conhecimento em python e machine Learning
+
+A parti da secao 4, iremos aprofundar estudos e praticas sob machine Learning
+
+Nesse curso, ao longo da secao, iremos ter alguns desafios para impor em pratica o conhecimento adquerido
