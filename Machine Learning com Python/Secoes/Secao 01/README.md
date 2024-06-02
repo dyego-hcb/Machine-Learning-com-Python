@@ -1,6 +1,6 @@
-# Machine Learning Completo com Python
+# Machine Learning com Python
 
-Este repositório é um registro de todo o meu trabalho e avanço no curso "Machine Learning Completo com Python". Este curso é abrangente e cobre desde os conceitos fundamentais de machine learning e da linguagem Python, até técnicas mais avançadas e específicas do campo de aprendizado de máquina.
+Este repositório é um registro de todo o meu trabalho e avanço no curso "Machine Learning com Python". Este curso é abrangente e cobre desde os conceitos fundamentais de machine learning e da linguagem Python, até técnicas mais avançadas e específicas do campo de aprendizado de máquina.
 
 ## Seção 1: Introdução
 

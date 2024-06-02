@@ -1,0 +1,164 @@
+-- Resumo da Seção 2: Fundamentos da Linguagem Python - Machine Learning com Python --
+
+Nessa secao, iremos aprender um pouco sobre a linguagem Python
+
+A Linguagem Python
+Lançado por Guido Van Rossum em 1991.
+Linguagem simples e prática.
+Fonte livre e aberta.
+Grande comunidade colaborativa.
+
+O Python é suportado pelo Windows, Linux, Macintosh, Solaris…
+Alto nível para várias aplicações: Desenvolvimento Web, Ciência de Dados, Inteligência Artificial e Computação Gráfica.
+
+Ambiente de Desenvolvimento Integrado (IDE) -> PyCharm, Spyder, Atom, VSCode, PyDev, Komodo, Geany, Pyzo
+
+Ambiente de desenvolvimento interativo baseado na Web
+Jupyter Notebook
+Jupyter Lab
+Arquivos no desktop.
+Dependente da capacidade de processamento do computador.
+Necessita instalação.
+Executa código dos servidores em nuvem do Google.
+Não necessita instalação.
+
+Google Colaboratory(Google Colab):
+Executa o codigo dos servidoes em novem do Google
+Nao requer instalacao
+Aproveitamento da potencia de hardware do Google (GPU TPU), independente da potencia da sua maquina
+
+CPU (Unidade de Processamento Central): Processador computacional de propósito geral.
+GPU (Unidade de Processamento Gráfico) : Acelera a renderização gráfica.
+TPU (Unidade de Processamento Tensorial) : Acelera tarefas de b aprendizagem profunda.
+
+Anaconda (Python)
+Plataforma de distribuição para ciência de dados com Python.
+Simplifica o gerenciamento e implantação de pacotes.
+
+NumPy -> Computação matemática com Python.
+Pandas -> Manipulação e análise de dados. Trabalha em conjunto com o Numpy.
+Scikit Learn -> Aprendizado de máquina (Machine Learning) em Python.
+Statsmodels -> Modelagem e testes Estatisticos.
+matplotlib -> Criação de gráficos e visualizações de dados em geral.
+seaborn -> Visualização de dados baseada no Matplotlib. Fornece interface de alto nível para desenhar gráficos estatísticos atraentes e informativos.
+plotly -> Criação de gráficos e visualizações de dados de forma interativa, com interface de alto nível.
+TensorFlow -> Biblioteca de código aberto. Desenvolvido pela Google Brain Team para aprendizado de máquina e pesquisa de redes neurais profundas.
+Keras -> Biblioteca de rede neural de código aberto. Roda em cima de TensorFlow. Permite experimentação rápida com redes neurais profundas e possui facilidade de uso.
+SciPy -> SciPy é uma biblioteca baseado em Python, de código aberto, para matemática, ciências e engenharia
+
+Para acessar o google colab, precisamos seguir os seguintes passos
+
+1- Logar na conta do g-mail
+2- Acessar drive
+3- Criar pasta
+4- Adicione arquivos
+5- Novo -> + -> Google Colaborator
+6- Vai abrir a pagina do google colaborato
+7- Dentro dessa pagina, iremos fazer todo nosso estudo, onde iremos escrever as funcoes, etc.
+
+Instalacao Anaconda Python
+
+No Windows:
+1- Acesse o site oficial da anaconda: https://www.anaconda.com/
+2- Product -> Edicao Individual -> Baixar
+3-> Instalar o exec -> next -> igree -> just me next -> next -> add install
+
+No Linux:
+1- Acesse o site oficial da anaconda: https://www.anaconda.com/
+2- Product -> Edicao Individual -> Baixar
+3- instalar -> chmod +x nome_do_arquivo.sh -> ./ nome_do_arquivo.sh -> enter -> yes -> enter
+
+No MacOs:
+1- Acesse o site oficial da anaconda: https://www.anaconda.com/
+2- Product -> Edicao Individual -> Baixar
+
+OBS1: Usuarios Linux, MacOs e Windows que preferem usar a versao desktop e recomendado o uso do JupterNotebook
+
+Conhecendo o Jupyter Notebook:
+Essa IDE deve ser utilizada por usuarios MacOs e Linux
+
+Ja vai vir instalado com o anaconda, com isso para abrir um projeto basta ir na pasta e digitar o comando jupyter notebook vai abrir no navegador
+Para criar um novo arquivo new -> notebook
+
+Celulas no notebook sao as linhas de comando
+o kernel e responsavel pelas acoes do notebook, como reiniciar, limpar, executar, etc
+File criamos novo notebook, abrimos outro,s etc
+Edit podemos editar as celulas
+View para visualizacao de dados
+Insert inserte acima ou abaixo
+
+Em python usamos o print para mostrar uma msg no console
+Podemos criar tambem variaveis que irao receber valores conforme a logica do negocio
+Com o metodo input, iremos receber uma entrada do usuario
+
+Operadores matematicos em python:
++ -> soma
+- -> subtracao
+* -> multiplicacao
+/ -> divisao
+% -> resto da divisao
+** ou pow -> eleva a potencia
+// -> pega a parte inteira da divisao
+
+Podemos importar bibliotecas utilizando a sintaxe:
+import nome_lib as apelido
+
+Importando libs e modulos, podemos utiliar de suas funcionalidades
+
+Podemos importar apenas funcoes/metodos de uma lib com a sintaxe:
+from nome_lib import nome_metodo
+
+Sintaxe para mostrar dados formatados em python:
+'{} texto {.2f}'.format(var1, var2)
+f'{var1} texto {var2:.2f}'
+'Texto",var,"texto"
+
+Estrutura condicional:
+Sao estruturas utilizadas para verificar se uma determinadada condicao e verdadeira, caso for faca uma acao, caso nao outra, etc, sintxe:
+if -> verifica se e verdadeiro faz o que esta em baixo
+else -> se nao for verdadeiro o if ou o elif e falso e faz o que ta em baixo
+elif -> outra verificacao para fazer caso o if seja falso e faz o que ta em baixo
+
+Estrutura de Repeticao:
+for -> Usado quando sabemos o numero de execucao
+sintaxe:
+for var_valor in range(inicio, fim) ou array
+
+while -> Ele repente enquanto a condicao e falsa, usado quando nao sabemos o numero de interacoes
+sintaxe:
+while var_valor condicao(> < !=) val_verificacao
+
+Lista, Tuplas e Dicionarios:
+Sao formas de agrupar valores
+
+Listas [] -> =(altera o valor), append(adiciona um valor na lista), sort(ordena a lista em ordem crescente), insert(insere um valor, dada uma posicao), remove(remove um valor da lista), pop(remove um elemento dada uma posicao)
+Tuplas () -> A tupla e imultavel nao pode ser alterado
+Dicionarios {} -> Utiliza chave e valor, semelhante ao um arquivo de excel, podemos deletar atributos chamando a funcao del
+
+Criacao de funcoes:
+Funcoes sao muito utilizadas, pois prove o reuso
+
+Para criar funcoes, devemos usar a sintaxe:
+def nome_func(parametros)
+
+Funcoes Lambda e Map:
+E uma forma mais simplificada de escritas de funcoes
+
+Lambda -> E uma funcao anonima, sua sinxate e dada pela sintaxe:
+lambda parametros: acoes
+
+Map -> Linka uma funcao com valores associados que irao utilizar essa funcao nas acoes
+
+List Comprehenions:
+Tem objetivo otimizar a utilizacao de listas e diminuir linhas de codigos, sintaxe
+var_list = [saida comandos]
+
+Vetores e Matrizes:
+Vetores -> Arrays, ou matriz unidimencional
+Matrizes -> Conjunto de numeros ou caracteres em uma sequencia, uma matriz e um array bidmencional
+
+Sintaxe vetor: [ ] nome_var = []
+Sintaxe matrizes: [[ ],] nome_mat = [[ ]]
+
+Com o numpy podemos criar uma matriz com o comando np.ones((num_linha,num_coluna)
+Com numppy podemos np.diag podemos setar os valores na diagonal da matriz
