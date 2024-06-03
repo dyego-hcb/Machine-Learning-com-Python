@@ -16,8 +16,4 @@ A Seção 3 é dedicada ao estudo aprofundado de estatística e probabilidade, f
 
 Na pasta [Resumo](./Resumos/), você encontrará um **resumo detalhado** do que foi abordado nesta seção, incluindo explicações e exemplos de código que ilustram os conceitos estudados.
 
-### Exercícios
-
-Na pasta [Exercicios](./Exercicios/), estão os exercícios propostos e suas respectivas soluções, que servem para consolidar o conhecimento adquirido sobre os fundamentos da linguagem Python.
-
 Espero que você encontre este repositório útil e informativo. Sinta-se à vontade para explorar e aprender!
