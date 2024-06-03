@@ -1,0 +1,402 @@
+-- Resumo da Seção 3: Fundamentos de Estatística para Machine Learning - Machine Learning com Python --
+
+Nessa secao, iremos abordas os condeitos basicoas de estatistica, visto que a estatistica e de suma importancia em machine learning
+
+ESTATÍSTICA
+Ciência que objetiva coletar, organizar, analisar e interpretar dados para tomadas de decisão.
+
+Algumas Aplicações:
+Inteligência Artificial (Machine Learning e Deep Learning).
+Ciência de Dados.
+Economia e Administração.
+Engenharia.
+Educação.
+Física
+Biomedicina.
+Pesquisas Científicas.
+
+Estatísticas se divide em tres grupos:
+1- Descritiva
+2- Probabilística
+3- Inferencial
+
+Estatística Descritiva
+Tipos de Variáveis.
+População e Amostragem.
+Medidas de centralidade: Média, moda e mediana.
+Medidas de Posição: Amplitude e Quartis.
+Medidas de Dispersão: Variância e Desvio Padrão.
+
+Estatística Probabilística
+Conceitos de probabilidades (espaço amostral, eventos e tipos de probabilidades).
+Distribuições de probabilidade discretas e contínuas: Binomial, Poisson, Exponencial e Normal.
+
+Estatística inferencial
+Estimativa: estimação de parâmetros e intervalo de confiança.
+Testes de hipóteses: paramétricos e não paramétricos.
+Correlação e Regressão Linear.
+
+Principais Ferramentas em Estatísticas
+Linguagem R
+SPSS
+SAS
+Python
+Minitab
+Excel
+Microsoft Power BI ou Tableu
+Stata
+Matlab
+Emblem
+
+ESTATÍSTICA APLICADA:
+Dados: Informações provenientes de contagens, medidas, observações e respostas. Quando agrupados formam conjuntos de dados.
+
+Conjunto de Dados:
+1) População: relação de todos os dados de interesse. São extraídos parâmetros.
+2) Amostra: é um subconjunto da população. São extraídas estatísticas.
+
+Dados sao de suma importantes para fazermos as analise estatisticas.
+Dados possuem informacoes agrupadas, variaveis e valores.
+
+Classificação das variáveis (dados):
+
+Variavel -> Qualitativa -> Nominal
+Variavel -> Qualitativa -> Ordinal
+Variavel -> Quantitativa -> Discreta
+Variavel -> Quantitativa -> Continua
+
+Qualitativas: atributos não numéricos ou que não servem para realizar cálculos.
+- Nominais: Denominações (cores, gênero, raça, títulos…)
+- Ordinais: atributos que podem ser classificados e/ou ordenados (Ex: classificação de filmes mais assistidos, grau de escolaridade, nível de satisfação, CPF…).
+
+Quantitativas: medidas numéricas ou de contagem.
+- Discreto: valores finitos ou enumeráveis (quantidade de pessoas numa sala, número de carros em um estacionamento…)
+- Contínuo: infinitos valores possíveis num intervalo (renda, tempo, altura…).
+
+Planejamento do estudo Estatístico
+1) Identificação da população e das variáveis.
+2) Plano para coleta de dados.
+3) Coleta de dados.
+4) Descrição dos dados usando técnicas da estatística descritiva.
+5) Interpretação dos dados e tomadas de decisões através da estatística inferencial e probabilística.
+6) Análise de erros.
+
+Amostragem
+- Amostragem é a medição ou contagem de parte de uma população.
+- Censo é a medição ou contagem de toda a população.
+- Amostras aleatórias: Todos os elementos tem chances iguais de serem relacionados. Pode ser com reposição ou sem reposição (repetir ou nao na amostra).
+
+Tipos de Amostragem:
+
+Probablistica / Aleatoria -> Simples, Estratificada, Sistematica Por Conglomerados
+Nao Probablistica / Nao Aleatoria -> Acidental ou Conveniencia, Intencional, Qoutas ou Proporcional, Desproporcional
+
+Link com aulas de estatistica para aprender mais a fundo: https://josenaldo.github.io/caderno-estatistica/aulas/
+
+Técnicas de Amostragem Probabilísticas
+Link com a documentacao dos tipos de amostragem: https://bookdown.org/luisfca/docs/tipos-de-amostragem.html
+
+1) Aleatória Simples: Seleção executada por meio de sorteio, sem nenhum filtro.
+2) Estratificada: Divisão da população em grupos e seleção aleatória de uma amostra de cada grupo. (Ex: divisão por região, classe social, religião…).
+3) Conglomerado (Agrupamento): Divisão da população em grupos com características similares, porém heterogêneas, e seleção aleatória de alguns grupos para analisar todos os elementos destes grupos. (Ex.: Divisão da população de escolas estaduais por região, enfermeiros de uma rede de hospitais, ruas e um bairro, … ).
+4) Sistemática: Membros da população são ordenados numericamente e são selecionados aleatoriamente, obedecendo uma sequência numérica. (Ex.: criação de números para cada amostra e seleção obedecendo uma ordem numérica).
+
+Frequências:
+1- Frequência absoluta -> Quantidade que se encaixa em um valor, exemplo da aula quantidade de pessoas que tiraram uma determinada nota em uma prova
+2- Frequência relativa -> Razao (Resultado da divisao) entre a frequencia absoluta e o numero total da amostra. Porcentagem ou porção de dados por classe
+3- Frequência percentual relativa -> Multiplica a frequencia relativa por 100, e retorna em porcentagem
+
+
+Distribuição de Frequências:
+Tabela que indica as classes ou intervalos dos registros de dados
+
+Largura da classe é a distância entre classes. No exemplo, têm-se 6 classes e 5 distâncias entre classes
+Classe 
+1 – 5 
+
+Amplitude é a diferença da entrada máxima pela entrada mínima. No exemplo têm-se amplitude igual à 29 (30-1).
+
+1- Frequência absoluta -> Quantidade que se encaixa em um valor
+2- Ponto médio-> soma do limite inferior com o superior dividido por 2.
+3- Frequência relativa -> Razao (Resultado da divisao) entre a frequencia absoluta e o numero total da amostra
+4- Frequência acumulada -> soma das frequências relativas anteriores com a frequência da classe atual. Porcentagem ou porção de dados por classe
+
+Histograma e um grafico que fica bem junto as barras, utilizando fronteiras para abranger toda a faixa de valores, onde x represtam as fronteiras e o y as frequencias
+
+Polígono de frequência usa o ponto medio e marca aquela frequencia, onode o x representa o ponto medio e o y as frequencias, calculase o ponto incial fazendo o primeiro ponto medio menos a sua parte iteira e o ponto final soma-se o valor do ponto medio inicial no ultimo ponto medio para gerar o poligono
+
+Ogiva e usa a frequencia acumulado para gerar o grafico, onde x e a fronteiras e y a frequencia acumulada, ate finalizar a fronteira crescente
+
+Gráfico de Pareto e um grafico de barras separados, onde x e as classes e y algum valor determinado
+Quando utiliza dados qualitativos.
+
+Medidas de tendência central:
+Média: soma de entradas de dados dividido pelo número de entradas.
+Mediana: Quando os dados são ordenados (crescente ou decrescente), a mediana é o valor que está no centro dos dados. Caso tenham dois valores centrais, calcula-se a média entre eles.
+Moda: é o valor que aparece com mais frequência no conjunto de dados.
+- Amodal: quando não tem repetição de entradas.
+- Bimodal: Duas modas.
+- Trimodal: Três modas.
+
+OBS: Nao confie apenas na media, pois ela pode ser influenciada por valores que estao "fora da curva"
+
+Média Ponderada
+Quando alguns valores possuem peso maior na média do que outros
+W = peso de cada entrada (valor).
+x*w/n
+
+Média de uma distribuição de frequência.
+x = ponto médio.
+f = frequência da classe.
+x*f/n
+
+Forma das distribuições
+1- Distribuicao Simetrica -> Lado esquerdo igual ao direito, Media, Mediana e Moda ficam no centro
+2- Distribuicao Uniforme -> Distribuicao retangular, Todos os valores estao na mesma frequencia
+3- Distribuicao Assimetrica a esquerda -> Negativamente assimétrica, A media fica a esquerda da mediana, e a moda a direita
+4- Distribuicao Assimetrica a direita -> Positivamente assimétrica, A moda fica a esquerda da mediana e a moda a direita
+
+Medidas de dispersão ou variação:
+
+Amplitude: Diferença entre as entradas máximas e mínimas
+Desvio Populacional: Diferença entre o valor e a média do conjunto de dados populacional.
+Variância Populacional: Media que calcula o somatorio do desvio de cada valor em relacao a media elevado ao quadrado divido por Numero de valores da populacao
+Desvio padrão Populacional: Raiz quadrada da variancia
+Variância Amostral: Semelhante a populacional, so que agora usa o calculo da media amostral, e a divisao e feita por n-1
+Desvio padrão Amostral: Semelhante a populacinal
+
+Graus de liberdade (n-1) para correção com relação a variância populacional.
+
+Regra Empírica – para distribuições simétricas:
+Grafico com formato de sino, onde:
+99% -> 3 desvios padrao
+95% -> 2 desvios padrao
+68% -> 1 desvio padrao
+
+Teorema de Chebychev:
+Aplicado em qualquer distribuição
+𝑚 = 1 − 1 / 𝑘2
+
+m = percentual dos dados.
+K = número de desvios padrões (>1).
+
+Desvio padrão para dados agrupados: E quando tmeos alguns valores agrupados, seu calculo e feito atraves da raiz quadrada do somatorio do valor menos a media ao quadrado vezes f dividido por n-1, f e frequencia
+
+Medidas de posição:
+Fractis: Divisão do conjunto de dados em partes iguais (Quartis, percentis, Mediana…).
+Quartis: Divide o conjunto de dados em 4 partes iguais.
+
+Amplitude Interquartil (IQR): IQR = Q3 – Q1
+
+OBS: IQR -> Intervalo interquartil
+
+Gráfico BoxPlot ou Caixa e Bigodes: As extermidaeds do bigode representam as entradas minimas e maximas, as extremidades da caixas representam os quartis 1 e 3, e mais ou menos na regiao central da caixar e o quartil 2
+
+OUTLIERS:
+Outliers são dados discrepantes, isto é, são dados muito diferentes dos demais dados pertencentes à variável em análise.
+A relevância deles deve ser analisada para definir se continuarão no dataset ou se devem ser tratados (corrigidos, excluídos ou substituídos), pois se não forem relevantes, podem interferir significativamente nos resultados das análises.
+Eles podem ser identificados por observações diretas no dataset (quando a quantidade for pequena), por gráficos e por funções específicas.
+
+O gráfico mais utilizado para identificar outliers é o BoxPlot, pois ele definie os maximos e os minimos, se houver outliers eles irao estar fora do padrao.
+
+Cálculo da faixa de valores que limitam os outliers
+A referência de cálculo é o intervalo interquartil (IQR) e obedece a seguinte equação:
+Limite superior = Q3 + 1,5 x IQR
+Limite inferior = Q1 - 1,5 x IQR
+
+Probabilidade: Nomenclaturas
+Experimento Aleatório (estocástico): apresenta resultados imprevisíveis, mesmo sendo repetido várias vezes (loteria, lançamento de dados…).
+Experimento Determinístico: o resultado é previsível (sequência numérica).
+Espaço amostral: conjunto de todos os resultados possíveis (Ex.: No lançamento de um dado o espaço amostral é 6).
+Evento: Subconjunto de um espaço amostral (Ex.: números pares nos dados).
+
+Probabilidade: Definição
+A probabilidade de ocorrer um evento A é a razão entre o número de elementos de A , n(A), e o número de elementos do espaço amostral E, n(E).
+Onde:
+𝑃 (𝐴)=𝑛(𝐴)/𝑛(𝐸)
+0 ≤ P(A) ≤ 1
+
+Probabilidade de não ocorrer um evento
+𝑃 (𝐴) =1−𝑃  𝐴)
+
+Probabilidade da união de eventos
+A probabilidade de ocorrer o evento A ou o evento B é igual a probabilidade de ocorrer A mais a probabilidade de ocorrer B menos a probabilidade de ocorrer A e B.
+𝑃 (𝐴∪𝐵)=𝑃(𝐴) + 𝑃(𝐵) − 𝑃(𝐴∩𝐵)
+Se A e B forem mutuamente exclusivos, A ∩ B = Φ
+
+OBS -> OU -> Uniao
+OBS -> E -> Intesecao
+
+Probabilidade Condicional
+A probabilidade de ocorrência do evento A condicionada ao evento B.
+𝑃(𝐴∨𝐵)= 𝑛(𝐴∩𝐵)/𝑛(𝐵) = 𝑃(𝐴∩ 𝐵)/𝑃(𝐵)
+
+Probabilidade da intersecção de eventos
+Se dois eventos, A e B, são independentes entre si (a ocorrência de um não influi na ocorrência do outro), a probabilidade de ocorrência de A e B é igual ao produto de cada um.
+𝑃(𝐴∩𝐵)=𝑃(𝐴).𝑃(𝐵)
+
+Regra da multiplicação (Intersecção eventos dependentes):
+𝑃(𝐵∨𝐴)= 𝑃(𝐴∩𝐵)/𝑃(𝐴) (𝐶𝑜𝑛𝑑𝑖𝑐𝑖𝑜𝑛𝑎𝑙) =>  𝑃(𝐴∩𝐵)= 𝑃(𝐴).𝑃(𝐵|𝐴) -> 2 Eventos
+𝑃(𝐴 ∩ 𝐵 ∩𝐶 ∩ 𝐷)= 𝑃(𝐴).𝑃(𝐵|𝐴).𝑃(𝐶|𝐴∩𝐵).𝑃(𝐷|𝐴∩𝐵∩𝐶) -> Mais de 2 eventos
+
+Teorema de Bayes
+Capacidade de encontrar uma probabilidade quando se conhece outras probabilidades.
+
+𝑃(𝐴∨𝐵)=𝑃 𝐴∩𝐵)/𝑃(𝐵)
+𝑃(𝐴∨𝐵)= 𝑃(𝐴).𝑃(𝐵|𝐴)/𝑃(𝐵)
+
+Lei da probabilidade total
+Determina a probabilidade total de um evento que pode ser realizado através de vários eventos distintos.
+
+Distribuições de probabilidades:
+Variáveis aleatórias: são variáveis quantitativas cujos valores estão associados a fatores aleatórios.
+
+1) Variável aleatória discreta: número contável de possíveis resultados ou atributos (Ex.: Número de pessoas em uma sala, número de gols em uma partida, número de filhos…).
+2) Variável aleatória contínua: número incontável de possíveis resultados ou atributos(Ex.: intervalo de tempo, temperatura, altura…).
+
+Distribuições de probabilidades discretas:
+Lista cada valor possível que a variável aleatória pode assumir, assim como a sua probabilidade.
+
+Condições:
+1) Probabilidade cada valor é entre 0 e 1: 0 ≤ P(x) ≤ 1.
+2) A soma das probabilidades deve ser igual a 1: Σ P(x) = 1
+
+Média de variáveis discretas -> Somatorio de cada valor vezes sua probabilidade
+Representa a média teórica de um experimento de probabilidade
+Valor esperado E de uma variável aleatória é igual a média e pode ser negativa.
+
+Variância de variáveis discretas -> somatorio - a media ao quadrado vezes probabilidade
+Desvio padrão de variáveis discretas -> raiz variancia 
+
+Distribuição Binomial
+Possibilidade de apenas dois resultados.
+Tentativas idênticas e independentes.
+n = número de tentativas ou amostras.
+p = probabilidade de sucesso em uma tentativa.
+q = probabilidade de fracasso em uma tentativa.
+x = variável aleatória que representa a contagem do número de sucessos.
+
+Distribuição Geométrica
+Probabilidade de repetidas tentativas até que o sucesso ocorra.
+Tentativas independentes.
+A probabilidade de sucesso é constante para todas as tentativas.
+p = probabilidade de sucesso em uma tentativa.
+q = probabilidade de fracasso em uma tentativa.
+x = variável aleatória que representa o número de falhas até o sucesso.
+
+Distribuição de Poisson
+Número de vezes que um evento ocorre num determinado intervalo (tempo, área ou volume).
+Probabilidade do evento ocorrer é a mesma para cada intervalo. Número de ocorrências nos intervalos são independentes.
+
+m = número médio de ocorrências (frequência).
+x = número de ocorrência num dado intervalo.
+
+Distribuições de probabilidades contínua
+Distribuição de probabilidade é dada por uma função denominada função densidade de probabilidade (FDP).
+Principal distribuição é a DISTRIBUIÇÃO NORMAL.
+Gráfico é chamado de curva normal. É simétrico e tem formato de sino.
+
+A média indica a posição e o desvio padrão indica o formato do gráfico
+
+Distribuições Normal Padrão
+Média zero e desvio padrão um (1).
+
+Z-escore: número de desvio padrão de um valor a partir da média.
+Consultar a tabela das distribuições normal padrão para associar o z com a probabilidade ou a área associada
+
+Teorema do limite central : Distribuição Amostral
+A distribuição da média é uma distribuição aproximadamente normal, quando o tamanho amostral é suficientemente grande.
+A distribuição amostral das médias das amostras é o equivalente da média de uma amostra.
+E pega os valores na tabela, como no exemplo 1,12, primeiro nas linhas procure o 1,1 e nas colunas o 0,2, esse valor que voce encontrara de ser menor que o z o valor encontrado e maior o valor que falta para o 100%
+
+Média das amostras fica com o valor igual da media populacional
+Variância variancia populacional dividio por n
+Desvio padrão variancia divido por raiz de n
+
+Distribuição Binomial – Correção pela continuidade
+Distribuição binomial é discreta, mas pode ser representada por um histograma.
+
+Condições para a distribuição binomial ser aproximada pela normal
+
+1) n*p >= 5
+2) n*q >= 5
+
+n = número de tentativas.
+p = probabilidade sucesso.
+q = probabilidade fracasso.
+Média: n*p
+Desvio Padrão: raiz n*p*q
+
+ESTATÍSTICA INFERENCIAL
+Intervalo de confiança
+Teste de hipótese com uma amostra
+Teste de hipótese com mais de uma amostra
+Correlação e Regressão
+Teste Qui quadrado e a distribuição F
+Testes não paramétricos
+
+Intervalo de confiança
+Nível de confiança: Probabilidade de que o intervalo estimado contenha o parâmetro populacional.
+Esse nível de confiança (c) é a área sob a curva normal padrão entre os valores críticos (-Zc e Zc).
+
+Níveis de confiança mais utilizados
+Nível de confiança | Zc
+90% | 1,645
+95% | 1,96
+99% | 2,575
+
+Testes de hipóteses com uma amostra ou uma população
+São testes de afirmações sobre um parâmetro.
+Processo que utiliza estatísticas amostrais para testar uma hipótese (afirmação original) e aceitá-la ou rejeitá-la.
+
+Existem duas hipóteses:
+1) Hipótese nula (Ho) -> Ho: == k Ho: u <= k Ho: u >= k
+2) Hipótese alternativa (Ha): oposto da hipótese nula. -> Ha: != k Ha: > k  Ha: < k 
+
+Usa-se a media como referencia para testes parametricos
+Usa-se a mediana como referencia para testes nao parametricos
+
+Há três tipos de testes:
+Unicaudal à esquerda -> Ho: u >= k Ha: u < k
+Unicaudal à direita -> Ho: u <= k Ha: u > k
+Bicaudal -> Ho: u == k Ha: u != k
+
+Tipos de erro
+Erro tipo I: hipótese nula rejeitada quando ela for verdadeira.
+Erro tipo II: aceita a hipótese nula (não rejeita) sendo ela falsa.
+
+DECISÃO | Ho verdadeira | Ho falsa
+NÃO rejeição de Ho | Decisão correta | Erro tipo 2
+Rejeição de Ho | Erro tipo 1 | Decisão correta
+
+Nível de significância (α)
+Probabilidade máxima permitida para cometer o erro tipo I.
+
+Níveis de significância mais utilizados:
+α = 0,10
+α = 0,05
+α = 0,01
+
+Nível de confiança (c): c = 1 – α
+
+Teste Z para média amostral
+É utilizado quando a distribuição é normal e o desvio padrão seja conhecido. É denominado de estatística do teste padronizado z.
+Quando n > 30, pode utilizar o desvio padrão da amostra (S) no lugar do desvio padrão da população (σ).
+
+Validação pelo valor de P na tabela Z
+P ≥ α (aceita Ho)
+P < α (rejeita Ho)
+
+Obs.: bicaudal deve dobrar o valor de p.
+
+Validação pela região de Rejeição
+
+Teste de hipótese para proporção
+Usado para proporção populacional com o teste z.
+Pode ser usado sob a condição de que a distribuição binomial pode ser aproximada pela normal.
+
+Métricas de Desempenho:
+Cálculo do erro:
+Erro absoluto: É o módulo do erro, todos os valores tornam-se positivos.
+Erro Quadrático Médio - EQM (Mean Squared Error – MSE)
+Raiz do Erro Quadrático Médio - REQM (Root Mean Squared Error – RMSE)

@@ -20,4 +20,4 @@ Na pasta [Resumo](./Resumos/), você encontrará um **resumo detalhado** do que 
 
 Na pasta [Exercicios](./Exercicios/), estão os exercícios propostos e suas respectivas soluções, que servem para consolidar o conhecimento adquirido sobre os fundamentos da linguagem Python.
 
-Espero que este repositório sirva como
+Espero que você encontre este repositório útil e informativo. Sinta-se à vontade para explorar e aprender!
