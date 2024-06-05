@@ -1,0 +1,609 @@
+-- Resumo da Seção 4: Aprendizado Supervisionado: Classificação - Machine Learning com Python --
+
+Nessa secao, iremos abordar conceitos teoricos e praticos sobre machine learning
+
+Inteligencia ARtificial -> Sistemas com habilidades de aprendizados e reações como os dos humanos.
+Machine Learning -> Algoritmos com habilidades de aprender por treinamento, sem serem explicitamente programados.
+Deep Learning -> Complementa o Machine Learning com habilidade de trabalhar com grandes volumes de dados, imagens, vídeos, sons…
+
+Machine Learning faz parte do grupo de IA
+
+Algumas Aplicações:
+Sistemas Financeiros: Prevenção de fraudes e geração de insights.
+Saúde: Identificação de tendências, confirmações e novidades para diagnósticos e tratamentos. Descoberta de novos medicamentos.
+Marketing e Vendas: Recomendações de produtos e serviços através de consultas e compras anteriores.
+Ciência: Eficiência na análise de dados e resultados de estudos científicos.
+Indústria: Descoberta de novos materiais, técnicas de fabricação, prevenção de falhas, aperfeiçoamento na produção.
+Governo: Geração de insights, análises sócio-econômicas, detecção de fraudes.
+Transporte: Identificação de padrões e tendências para rotas de transporte.
+
+A Matemática do Machine Learning: https://towardsdatascience.com/the-mathematics-of-machine-learning
+1) Estatística: Descritiva, Probabilística, Bayesiana e Regressões.
+2) Álgebra Linear: Vetores e Matrizes, Sistemas Lineares, Estimativa dos mínimos quadrados, transformação linear, autovetores e autovalores.
+3) Cálculo Multivariado: Funções de várias variáveis, Derivadas Parciais, Integrais Múltiplas, Equações Diferenciais, Geometria Multivariada, Vetor Direcional e Gradiente.
+
+Linguagens de programação para Machine Learning
+1) Linguagem R
+2) Python
+3) Scala
+4) Java
+5) Julia
+6) SAS
+7) SPSS
+
+Formas de Aprendizagem de Máquina:
+Supervisionada: Interação de um agente externo. O algoritmo possui dados de entrada e de saída para treinamento (Ex.: Análise de crédito).
+Não Supervisionada: Tipo de aprendizagem auto-organizada. Não existe uma resposta ou modelo de referência para treinar o algoritmo (Ex.: Associação ou agrupamento de produtos com similaridades).
+Aprendizagem por Reforço: Recebe informações do ambiente, que indica o erro, mas não a forma de melhorar a ação e o desempenho.
+O conjunto de dados muda a todo instante, demandando contínuo processo de adaptação (Ex.: movimentação de robôs).
+
+Supervisionada -> Classificação -> Variável Resposta é discreta (Sim ou Não, Azul ou Vermelho, 0 ou 1 ou 2).
+Supervisionada -> Regressão -> Previsão ou predição de um valor numérico.
+Não Supervisionada -> Agrupamento (Clustering) -> Agrupar dados por características (idade,gostos...)
+Não Supervisionada -> Associação -> Obter regras com os dados (pais com crianças compram mais doces).
+Não Supervisionada -> Redução de dimensionalidade -> Escolha das melhores variáveis para otimizar o processo
+
+Etapas Fundamentais para construção do algoritmo:
+1) Análise do problema.
+2) Exploração, Tratamento e Análise dos dados.
+3) Pré processamento dos dados.
+4) Escolha do grupo de algoritmos que podem ser utilizados.
+5) Criação dos algoritmos de Machine Learning.
+6) Comparação e escolha do melhor algoritmo.
+
+Repositórios de dados:
+INEP: https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados
+Portal brasileiro de dados abertos: www.dados.gov.br
+Kaggle (competições Machine Learning): www.kaggle.com
+OMS: https://www.who.int/
+UCI Machine Learning Repository: https://archive.ics.uci.edu/ml/index.php
+Paho (organização panamericana de saúde): https://www.paho.org/en
+Google dataset Search: https://datasetsearch.research.google.com/
+DrivenData (competições Ciência de Dados): https://www.drivendata.org/
+
+Separação de Dados de Treino e Teste:
+Dados de treino: Certa quantidade dos dados (aproximadamente 70%) destinada para treinar o algoritmo.
+
+Dados de teste: Quantidade restante dos dados (aproximadamente 30%) para analisar o desempenho do algoritmo.
+
+Essa separação deve ocorrer de maneira aleatória para evitar problemas nos modelos criados (Exemplo: ter uma quantidade de dados que aparecem em pequena quantidade ou nem aparecem nos dados de teste).
+
+Validação cruzada (Cross validation) -> E uma forma de analisar se a separacao foi bem feita
+
+Atenção a dois problemas no treinamento:
+1 Underfitting (alto viés) Algoritmo que não se encaixa com os dados de entrada.
+2 Overfitting (alta variância) Algoritmo ótimo para os dados de entrada e ruim para dados de teste.
+
+Classificação:
+Com base nos dados de entrada estima-se um “classificador” que gera como saída uma classificação qualitativa de um dado não observado
+O classificador sao os atributos, ou colunas do csv por exemplo
+
+Análise do desempenho: Matriz de confusão, usada para analisar o desempenho
+Negativo e Negativo -> Verdadeiro Negativo
+Negativo e Positivo -> Falso Positivo
+Positivo e Negativo -> Falso Negativo
+Positivo e Positivo -> Verdadeiro Positivo
+
+Diagonal principal acertos.
+Diagonal secundaria erros.
+
+Os previsores sao os atributos
+E a classe que classificara aquele dado, e um target
+
+Análise do desempenho: Matriz de confusão
+Acuracia
+Precisao
+Recall
+F1 Score
+
+Algoritmos de Classificação
+Regressão Logística
+Naive Bayes
+Árvore de decisão
+Random Forest
+KNN
+Máquinas de Vetor de Suporte
+XGBoost
+LightGBM
+CatBoost
+Redes Neurais Artificiais
+
+Exploração e análise dos dados:
+Para abrirmos o arquivos csv no python, precisamos utilizar a lib numpy e pandas
+Apos feito isso, iremos extrair os dados, para isso usamos o comando pd.read_csv(caminho, separador, encodding)
+Podemos pegar o caminho do arquivo clickando com botao direito e copy path
+Para mostrar dados, usamos o comado .head(), so que o head por padrao mostra os 5 primeiros
+Para mostrar dados, usamos o comando .tail(), que mostra os ultimos registros, por padrao e 5 ultimos
+Para ver quanta linhas e colunas temos no arquivo, usamos o comando shape
+Para contar quantas instancias possuem um valor, usamos o comando dados['nome_tupla'].value_counts()
+O comando sort_index() coloca em ordem de acordo com os valores da tupla
+
+Podemos criar graficos em python usando a biblioteca plotly, para criar um histograma basta usar o comando histogram(dados, x = nome_tupla, largura_coluna)
+Apos cria o histograma, devemos definir o layout com update_layout(altura, largura, titulo)
+E mostrar com o comando .show()
+
+Podemos gera graficos em pythom com outra biblioteca, chamda seaborn, podemos criar com a seguinte sintaxe histplot(dados, x= nome_tupla, largura_coluna, color="nome_cor", kde=mostrar_linha_tendencia_distr, stat=dados eixo y)
+
+Podemos selecionar os atributos usando a sintaxe dados['nome_tupla'] ou dados.nome_tupla
+
+Análise e tratamento dos dados:
+Usando a funcao dtypes podemos ver os tipos de atributos que podemos ter no conjunto de dados
+Esses tipos podem ser:
+object -> strings
+int64 -> inteiros
+float64 -> reais
+complex -> complexos
+
+Para verificar se ha valores faltantes usamos o comando:
+isnull().sum() -> retorna o numero de valores faltantes de cada variavel
+dropnan() -> exclui valores faltantes no database
+
+Quando encontramos valores faltantes devemos fazer uma analise se e viavel excluir ou adicionar um valor, como a moda ou media
+Para colocar valores no lugar dos valores faltantes usamos a sintaxe
+dados['nome_tupla'].fillna(valor, inplace=true)
+
+inplace=true -> para alterar de fato no arquivo, se nao colocar ele altera apenas na execucao e nao no arquivo
+
+OBS: Drop -> Excluir Fill -> Preencher
+
+Usando o comando dados.describe() retorna toda a estatistica descritiva dos atributos com valores numericos desse conjunto de dados
+O comando dados.mode() retorna a moda de todos os atributos daquele conjunto de dados
+
+Para tratar valores incoerentes, podemos:
+Excluir registro com valor zero com o comando dados.loc[dados.NomeTupla != 0]
+Subistituir valores zero pela media ou outro valor, primeiro temos que:
+Trocar os valores zero por NaN usando a funcao dados.nomeTupla.replace(0, np.NaN, inplace=true)
+Depois alterar os dados com valores NaN usando a funcao dados['nomeTupla'].fillna(dados['nomeTupla'].mean(), inplace=true)
+
+Para analisarmos outliers, utilizamos os graficos de box-plot, pois ao criar um grafico box-plot daquele atributo, iremos ter os maximos e minimos, e tambem pontinhos que estarao acima desses maximos e minimos, esses valores serao determinados como outliers, ja que estao muito acima ou abaixo do maximo definido
+Usa-se a seguinte sintaxe para gerar esses graficos box-plot
+px.box(dados, y="NomeTupla")
+
+Para salvar o dataframe, usamos o comando dados.to_csv('nome_arquivo.csv', sep=';', encoding='utf-8', index=False)
+
+index=False -> Para mostrar ou nao uma coluna com os id
+
+Abiaxo iremos passar instrucoes para prepara o nossos dados para para criarmos um algoritimo de machine learning
+
+Pré-processamento dos dados:
+1- Importar as lib numpy e pandas
+2- Abir o arquivo csv
+3- Mostrar o arquivo com a funcao head
+4- Ver quantas instancias e atributos possui com a funcao shape
+5- Ver os tipos de dados a serem trabalhados com o comado dtypes
+6- Transformar as variaveis categoricas nominais em categoricas ordinais, podemos faze isso utilizando o replace, e trocando os valores nominais por numericos
+OBS: Para copiar um dataframe, precisamos uar o comando pd.DataFrame.copy(data_original)
+7- Extrair os atributos previsores, usando a funcao dados.iloc[:, 0:ColunaMax].values
+8- Extrair o atributo target, usando a funcao dados.iloc[:, ColunaMax].values
+9- Realizar uma analise das escalas dos atributos usando o metodo describre
+OBS: Esse passo e importante pois ha diferencas muito grande entre os valores minimo e maximo, para lidar com isso podemos usar a lib sklear.processing:
+Padronização (utiliza a média proximo de 0 e o desvio padrão proximo de 1 como referência) -> usando o comando StandardScaler().fit_transform(previsores)
+Normalização (utiliza os valores máximo e mínimo como referência) -> usando Max ou MinAbsScaler
+
+Podemos utilizar o LabelEncoder para transformar as variaveis categoricas nominais em numeroas automaticamente, para isso precisamos uasr a lib sklear.processing, e fazendo os seguintes passos:
+dados.iloc[:, 0:NumColunas].values
+LabelEncoder().fit_transform(previsores[:, num_coluna]) -> transforma uma linha do indice
+
+Temos que ficar atentos a um possivel problena, que e das variaveis derivaidas como do exemplo citado, execicio todos os dia, um ou dois, etc, podem gerar um nivel de maior ou menor para isso usaremos variaveis dummy ficticias para nao termos esses problemas, todas serem avaliadas do mesmo jeito.
+Essas variaveis criam uma matriz onde i==j e o valor de uma possivel resposta, como nao, uma vez ou dois na semana, etc, fazendo com que nao entenda que um e maior que o outro
+
+Para criar essas variaveis, utilizamos os metodos OneHotEncoder e ColumnTransformer ambos do sklearn, um do procssing o one hot e o outro do compose o column
+
+Parâmetros ColumnTransformer
+
+name: nome dado a transformação.
+transformer: tipo de estimador (OneHotEncoder).
+columns: colunas que serão transformadas.
+remainder: o que acontecerá com o restante das colunas não relacionadas:
+
+drop = exclui as outras colunas.
+passthrough = mantém as outras colunas. drop é default.
+
+sparse_threshold: parâmetro de classificação de matrizes esparsas. default é 0.3
+n_jobs: número de trabalhos a serem executados em paralelo. default é nenhum
+transformer_weights: definição de pesos aos transformadores. -verbose: default é False. se for True a execução é apresentada na tela.
+
+Com isso, para apricar na pratica basta utilizar o comando:
+ColumTransformer(transformer=[('OneHot', OneHotEncoder(), ColumnsCriadasEncoder, remainder).fit_transform(previsoes)
+
+Escalonamento -> Escalonar os valores para um padrao para nao ficar muito discrepante a diferenca usando o standardScaler, buscando sempre uma media perto de 0 e desvio padrao perto de 1
+
+Redução de dimensionalidade
+Objetivo é selecionar os melhores componentes (atributos) para treinamento do algoritmo, através da análise das correlações entre as variáveis.
+Análise dos Componentes Principais (PCA)
+Seleção de características: seleciona os melhores atributos e utiliza sem transformações.
+Extração de Características: Encontra os relacionamentos dos melhores atributos e cria novos atributos.
+
+Lib: from sklearn.decomposition import PCA
+
+É um algoritmo de aprendizagem não supervisionada.
+Aplica-se em dados linearmente separáveis.
+
+Kernel PCA
+É um algoritmo de aprendizagem não supervisionada, so precisa dos previsores.
+Aplica-se também em dados linearmente não separáveis.
+
+Lib: from sklearn.decomposition import KernelPCA
+
+Análise do Discriminante Linear (LDA: Linear Discriminant Analysis) -> Utilizadaquando temos grande numero de classes
+Algoritmo de aprendizagem supervisionada, pois utiliza a classe como referência para seleção.
+Aplica-se também em dados linearmente não separáveis.
+
+Lib: from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
+
+Pra salvar as variavels usamos a lib pickle
+
+BASE DE TREINO E TESTE
+Lib:from sklearn.model_selection import train_test_split
+Parâmetros train_test_split:
+
+arrays: nomes dos atributos previsores e alvo.
+test_size: tamanho em porcentagem dos dados de teste. default é none.
+train_size: tamanho em porcentagem dos dados de treinamento.default é none.
+random_state: nomeação de um estado aleatório.
+shuffle: embaralhamento dos dados aleatórios. Associado com o random_state ocorre o mesmo embaralhamento sempre. Default é True.
+stratify: Possibilidade de dividir os dados de forma estratificada. Default é None (nesse caso é mantido a proporção, isto é, se tem 30% de zeros e 70% de 1 no dataframe, na separação em treinamento e teste se manterá essa proporção).
+
+Ele retorna X_train e X_teste que sao os treinamentos e testes dos previsores
+Ele retorna Y_train e Y_teste que sao treinamentos e trestes da classe alvo
+
+NAIVE BAYES
+doc: https://scikit-learn.org/stable/modules/naive_bayes.html
+lib: from sklearn.naive_bayes import GaussianNB
+
+Um dos primeiros algoritmos em Machine Learning.
+Classificador probabilístico baseado na aplicação do teorema de Bayes.
+Premissa: independência entre as variáveis do problema.
+Trabalha muito bem com variáveis categóricas.
+
+Algumas Aplicações
+Filtros de spam.
+Diagnósticos médicos.
+Classificação de informações textuais.
+Análise de crédito.
+Separação de documentos.
+Previsão de falhas.
+
+Vantagens:
+Rápido e de fácil entendimento.
+Pouco esforço computacional.
+Bom desempenho com muitos dados.
+Boas previsões com poucos dados
+Desvantagens:
+Considera atributos independentes.
+Atribuição de um valor nulo de probabilidade quando uma classe contida no conjunto de teste não se apresenta no conjunto de treino.
+
+Pra calcular as metricas utilizas a lib from sklearn.metrics
+Matriz de confusao -> Diagonal principal acertos Secundaria erros
+
+Utiliza-se validacao cruzada para verificar se a separacao de treino e teste foi boa ou nao, utiliza as libs:
+from sklearn.model_selection import KFold
+from sklearn.model_selection import cross_val_score
+
+MÁQUINAS DE VETORES DE SUPORTE (SVM)
+doc: https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html
+lib: from sklearn.svm import SVC -> SVC C porque usaremos classficiacao
+
+Aplicado em problemas de aprendizagem supervisionada tanto de classificação como de regressão.
+Em classificação é conhecido como Classificador de Vetor de Suporte (SVC).
+Cria hiperplanos de separação.
+Pode ser aplicado em problemas linearmente separáveis e não linearmente separáveis.
+
+Equação
+Onde:
+w = vetor hiperplano
+x = vetor pertencente ao hiperplano.
+b = deslocamento em relação à origem.
+
+Algumas Aplicações
+Classificação.
+Categorização de textos.
+Reconhecimento de imagem.
+Detecção facial.
+Detecção de anomalias.
+Reconhecimento de letras manuscritas.
+
+Constante de penalização (custo)
+Parametros: Sao aqueles que ja sao incluidos na funcao e nao ha controle deles
+Hiperparâmetro C: controla a tolerância dos erros.
+Quanto maior o valor de C, maior o poder de separação das classes, porém maior a probabilidade de overfitting (falha muito no teste e acerta muito no treino) e do tempo de treinamento.
+Quanto menor o valor C, maior a chance de erros na separação e consequentemente ocasiona underfitting (falha muito no treino).
+
+Problemas não lineares
+Utiliza-se a técnica kernel Trick para transformação de não lineares para lineares.
+Adicionando pesos para uma determinada classe, deixando ela em um plano diferente
+
+Ajusta-se o hiperparâmetro gama para otimização.
+Quanto maior maior e o poder de separacao
+Porem podemos ter problemas de overfitting
+Deve-se fazer testes com o valor de C para chegar a um valor que apresentou uma melhor acertividade em ambos conjuntos
+Deve-se fazer testes com o valor do kernel para chegar a um valor que apresentou uma melhor acertividade em ambos conjuntos
+Se estiver empatado o melhor e o mais rapido
+
+Vantagens
+Não é influenciado por dados discrepantes.
+Solução de problemas lineares e não lineares.
+Muito efetivo para datasets grandes.
+Consegue aprender com características não pertencentes aos dados.
+
+Desvantagens
+Difícil interpretação teórica devido a matemática complexa.
+Difícil visualização gráfica.
+É lento comparado aos outros algoritmos.
+Deve-se ter um grande cuidado com as definições dos hiperparâmetros para evitar overfitting e underfitting.
+
+REGRESSÃO LOGÍSTICA
+doc: https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html
+lib: from sklearn.linear_model import LogisticRegression
+
+A penalidade e o solver (solucionador, um algoritimo que vai em busca de otimizar o algoritimo com o menor erro possivel) devem ser configurados juntos.
+Visto que a penalidade sao utilizadas para evitar problemas de variancias e multicolianoriade (alta correlacao entre as variaveis)
+l1 -> laco
+l2 -> read (default)
+elasticnet -> juncao l1 e l2
+Configuracao do solver deve-se verificar na doc qual a penalidade que aceita
+Tolerancia (relacao ao erro) e Maximas interacoes devem estar em conjuntos, pois nas interacoes o algortimo vai tentar melhorar o resultado ou para de executar o resultado
+C -> Igual o svm
+
+Algoritmo de classificação em aprendizagem supervisionada.
+Utiliza conceitos de regressão linear em seu modelo matemático.
+
+Atividade supervisionada -> Quando temos dados de entrada e saida
+Atividade nao-supervisionada -> Quando nao temos dados de entrada e saida
+
+p = probabilidade de pertencer a determinada classe.
+e = número de Euler 2,71.
+b o = intercepto.
+b n = coeficientes.
+x n = variáveis dependentes.
+
+Pode ser binária (variável dependente binária) ou multinomial (variável dependente com mais de duas categorias).
+Linear Regressao -> Fica uma reta
+Logistica Regressao -> Tem uma forma de curva S
+Limiar de Decisao -> Geralmente e a metade
+
+Aplicações
+Está presente em diversas aplicações e em várias áreas de estudo como na economia, bioestatística, psicometria, medicina, ciências sociais…
+
+Vantagens
+Fácil implementação.
+Teoria consolidada.
+Excelente desempenho.
+Indica o valor de probabilidade para cada instância.
+
+APRENDIZAGEM BASEADA EM INSTÂNCIAS (KNN)
+doc: https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html
+lib: from sklearn.neighbors import KNeighborsClassifier
+
+Algoritmo de classificação em aprendizagem supervisionada.
+KNN é a sigla de K Nearest Neighbors (K vizinhos mais próximos).
+O KNN realiza classificação de instâncias (dados) em classes (grupos de dados semelhantes).
+Não possui um modelo matemático, apenas classifica uma instância através de cálculos de distâncias.
+
+Em problemas de classificação é recomendado utilizar número de classes ímpares para evitar empates durante o processo.
+
+Metricas de Distancias: https://scikit-learn.org/stable/modules/generated/sklearn.metrics.DistanceMetric.htm
+Minkowski se p=1 e w=1 cai na manhattan, e se p=2 e w=1 cai na euclidiana
+
+Parametros principais -> n_neighbors, p e metric
+Com dados escalonanos o KNN consegue resultados melhores
+
+Vantagens
+Fácil implementação.
+Fácil entendimento.
+Excelente desempenho em situações de dados com características complexas.
+Poucos parâmetros para ajustar.
+
+Desvantagens
+Alto custo computacional.
+Parâmetro k é ajustado na tentativa e erro.
+Necessita transformar dados categóricos em numéricos.
+
+ÁRVORE DE DECISÃO
+doc: https://scikit-learn.org/stable/modules/tree.html
+lib: from sklearn.tree import DecisionTreeClassifier
+
+Aplicado em problemas de aprendizagem supervisionada tanto de classificação (mais utilizado) como de regressão.
+Seleciona a ordem que os atributos irão aparecer na árvore, sempre de cima para baixo, conforme sua importância para a predição, assim como determina a separação dos ramos da árvore.
+Estrutura similar a um fluxograma. É composto por nós (atributos mais importantes), ramos (ligacao) e folhas (saida).
+
+Para determinar o nível de importância de um atributo, denominado de ganho de informação, utiliza-se de várias métricas, sendo que as mais aplicadas são a entropia (medida da falta de homogeneidade) e o índice de Gini (medida do grau de heterogeneidade).
+
+Cálculo da Entropia (E) -> Medida da falta de homogenidade
+Cálculo do Índice de Gini -> Medida do grau de heterogeneidade
+
+p i = probabilidade de ocorrência do atributo nos dados.
+n = número de classes que pode ser atingida.
+
+Cálculo do Ganho de informação (G) -> Utiliza os calculos anteriores para calcular o ganho de info
+
+p(a) = probabilidade de ocorrência de um categoria de um determinado atributo.
+p(i/a) = probabilidade da classe i ocorrer, dado que a já tenha ocorrido.
+n = número de classes que pode ser atingida.
+
+Podagem Das Árvocres
+Objetiva diminuir a probabilidade de overfitting.
+Pode ser de duas formas:
+1) Pré-podagem: parar o crescimento da árvore.
+2) Pós-podagem: poda com a árvore já completa.
+Processo de podagem:
+Percorre a árvore em profundidade.
+- Para cada nó de decisão calcula o erro no nó e a soma dos erros nos nós descendentes.
+- Se o erro do nó é menor ou igual à soma dos erros dos nós descendentes então o nó é transformado em folha.
+
+Vantagens
+Fácil entendimento e interpretação.
+Normalmente não necessitam de preparações sofisticadas nos dados (label Encoder e OneHot Encoder).
+Trabalha com valores faltantes, variáveis categóricas e numéricas.
+Atua com dados não linearmente separáveis.
+
+Desvantagens
+Sujeito a problemas de overfitting.
+Os modelos são instáveis (possuem alta variância).
+Não garante a construção da melhor estrutura para os dados de treino em questão (Necessita treinar várias árvores distintas).
+
+RANDOM FOREST
+doc: https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html
+lib: from sklearn.ensemble import RandomForestClassifier
+
+Criação aleatória de várias árvores de decisão.
+Utiliza o método Ensemble (construção de vários modelos para obter um resultado único).
+É mais robusto, complexo e normalmente propicia resultados melhores, mas possui maior custo computacional.
+Em problemas de classificação o resultado que mais aparece será o escolhido (moda), já em regressão será a média.
+
+Diferença entre random forest e decision tree
+Árvore de decisão:
+apenas uma árvore.
+cria regras para seleção das melhores variáveis.
+resultado é “fruto” de uma única árvore.
+
+Random Forest:
+conjunto de árvores.
+seleção das variáveis aleatoriamente.
+resultado é a moda ou média de todas as árvores.
+
+Vantagens
+Resultados bastante precisos.
+Normalmente não necessitam de preparações sofisticadas nos dados (label Encoder e OneHot Encoder).
+Trabalha com valores faltantes, variáveis categóricas e numéricas.
+Pouca probabilidade de ocorrência de overfitting.
+
+Desvantagens
+Velocidade de processamento relativamente baixa.
+Difícil interpretação de como chegou no resultado.
+
+XGBOOST
+doc: https://xgboost.readthedocs.io/en/stable/
+lib: from xgboost import XGBClassifier
+
+Parametros principais -> booster (padrao utilizado da arvore), eta (taxa de aprendizagem), n_estimators (numero de arvores), maxima profundiadade das arvores, ojective (Tipo de logistica)
+
+XGBoost (eXtreme Gradient Boosting)
+Algoritmo poderoso baseado em árvores de decisão.
+É uma evolução do algoritmo Gradient Boosting (aumento de Gradiente) que por sua vez é uma evolução do Random Forest.
+Apresenta aderência a grande variedades de aplicações.
+Roda em várias linguagens de programação, nos principais sistemas operacionais e em nuvem.
+
+Evolução dos algoritmos baseados em árvore até o XGBoost
+Decision Trees, Baggin, Random Forest, Boosting, Gradient Boosting, XGBoost
+
+LIGHTGBM
+doc: https://lightgbm.readthedocs.io/en/latest/pythonapi/lightgbm.train.html
+lib: import lightgbm as lgb
+
+LightGBM (Light Gradient Boosting Machine)
+Algoritmo poderoso baseado em árvores de decisão.
+É uma evolução do algoritmo Gradient Boosting (aumento de gradiente) que por sua vez é uma evolução do Random Forest.
+Alta velocidade de processamento.
+No LGBM a árvore cresce em folhas enquanto que nos outros algoritmos baseados em árvore crescem em níveis.
+
+Observações importantes
+O Light GBM trabalha muito bem com grandes quantidades de dados e não é recomendado para trabalhar com poucos dados.
+Possui mais de 100 hiperparâmetros para ajuste.
+
+No LightGBM, precisamos instanciar um dataset de terino, usando a funcao lgb.DataSet(x_treino, label= y_treino)
+
+Hiperparâmetros principais:
+Controle de ajuste
+num_leaves : define o número de folhas a serem formadas em uma árvore. Não tem uma relação direta entre num_leaves e max_depth e, portanto, os dois não devem estar vinculados um ao outro.
+max_depth : especifica a profundidade máxima ou nível até o qual a árvore pode crescer.
+
+Controle de velocidade
+learning_rate: taxa de aprendizagem, determina o impacto de cada árvore no resultado final.
+max_bin : O valor menor de max_bin reduz muito tempo de procesamento, pois agrupa os valores do recurso em caixas discretas (dados e variaveis continuas em valores ou categorias discretas), o que é computacionalmente mais barato.
+
+Controle de precisão
+num_leaves : valor alto produz árvores mais profundas com maior precisão, mas leva ao overfitting.
+max_bin : valores altos tem efeito semelhante ao causado pelo aumento do valor de num_leaves e também torna mais lento o procedimento de treinamento.
+
+Apos feito isso, iremos criar um dicionario de parametros, onde iremos definir os parametros utilizado na execucao do treinamento.
+Depois de feito isso, temos que usar a funcao lgb.train(paramentros (dict criado anteriormente, dataset criado anteriormente, num_boost_round (numero de estimadores))
+
+LightGBM retorna os valores como os valores de classificaco quebrados e nao 0 ou 1, ou 0 1 2, etc, devemos fazer isso na mao, com isso deve-se aplicar alguma logica para considerar ate uma faixa de valor uma classe e acima dessa faixa outra
+
+CATBOOST
+doc: https://catboost.ai/en/docs/
+lib: from catboost import CatBoostClassifier
+
+CatBoost (Category Boosting)
+Algoritmo poderoso baseado em árvores de decisão em aprendizagem supervisionada de classificação e regressão.
+É uma evolução do algoritmo Gradient Boosting (aumento de gradiente) que por sua vez é uma evolução do Random Forest.
+Alta velocidade de processamento.
+Executa automaticamente as transformações das variáveis categóricas.
+Trabalha com eficiência em grandes e baixos volumes de dados.
+
+Para validar a separacao de treino e testes usando a validacao cruzadas, no parametro deve-se passar os previsiores criados sem a utilizacao do catboost
+
+Vantagens
+CatBoost permite o treinamento de dados em várias GPUs.
+Fornece ótimos resultados com parâmetros padrão.
+Oferece maior precisão devido ao ajuste excessivo reduzido.
+Pode lidar com valores ausentes internamente.
+Pode ser usado para problemas de regressão e classificação.
+
+Salvando dados e simulando Deploy:
+Devemos salvar as predicoes e o alvo em csv para por em producao.
+Alem do classificador que obteve a melhor metrica.
+
+Com isso iremos criar um algoritimo no jupyter com a descricao do que esse algortimimo faz
+Depois iremos abir os arquivos de previsores e alvos e atribuir a variaveis
+Depois feito isso, iremos converter para uma matriz
+Carregar o classificador com os hiperparametros configurados
+fit nos previsores e alvo
+
+Para simular novos atributos adicionais a base e veriricar sua classificacao, basta preencher os previsores criando um novo array "objeto" e depois utiliza a funcao predict(np.array([objeto_novo]) para verificar a predicao
+
+Parâmetros e Hiperparâmetros:
+Parâmetros: Ajuste diretamente no aprendizado. Através de um conjunto de parâmetros o algoritmo encontra uma função que minimiza as perdas em um conjunto de dados, isto é, são intrínsecos à equação do modelo.
+Exemplos: Coeficientes de uma regressão linear, pesos em uma rede neural artificial, variáveis em árvores de decisão...
+
+Hiperparâmetros: argumentos ajustáveis que permitem controlar o processo de aprendizagem. Definidos anteriormente ao treinamento.
+Não são aprendidos diretamente pelo algoritmo de aprendizado.
+Previne problemas de overfitting e underfitting.
+Controla a capacidade do modelo.
+Exemplos: Profundidades de uma arvore, numero de arvores, taxas de apredizagem, numero de camadas e numero de neuronios, funcao kernel, etc...
+
+Otimização ou Ajuste de Hiperparâmetros
+Indica a configuração de hiperparâmetros que resulta no melhor desempenho do algoritmo.
+As configurações ideais de hiperparâmetros geralmente diferem para diferentes conjuntos de dados, portanto, devem ser otimizados para cada conjunto de dados.
+Podem ser discretos (número de camadas) ou contínuos (intervalo entre um mínimo e máximo).
+
+Métodos comuns de otimização de Hiperparâmetros
+
+1) Manualmente.
+2) Grid Search (testa todas as combinações Npossíveis de todos os valores definidos anteriormente).
+3) Random Search (testa aleatoriamente as combinações de faixas de valores em uma quantidade de vezes definida pelo usuário).
+4) Otimização Bayesiana (algoritmo aprende com os testes anteriores e testa faixas de valores com base na probabilidade de melhores resultados dos hiperparametros).
+
+Métodos de otimização de Hiperparâmetros
+O ajuste consiste em procurar por:
+Seleção dos hiperparâmetros principais.
+Definição de um espaço de hiperparâmetros.
+Aplicação da validação cruzada.
+Utilização de uma métrica de desempenho para validação.
+
+A metrica roc e a probabilidade do modelo distiguir corretamnte a classe postiva e negativa, baseando no y verdadeiros positivos e x falsos positivos
+Utilizando a biblioteca gridsearch podemos utilizar a criacao de espacos de hiperparametors que sera um dicionario, que contera combinacoes de parametros para a execucao daquele algoritimo de forma automatica, fazendo toads as combinacoes possiveis dos hiperparametos
+Depois deve-se fazer a configuracao da procura do gridseacrh com a GrindSearchCV(classificador, dict_paramaetros, scoring, cv(validacao crucada numero de combinacoes/splits))
+Faz o fit
+Depois de testar as combinacoes utiliza a funcao best_params para ver os melhores resultados
+
+Depois que configurar deve-se testar as configuracoes dos hiperparametros em casos testes reais e verificas as metrica
+
+DESAFIO 1:
+DESENVOLVER E SELECIONAR O MELHOR ALGORITMO DE MACHINE LEARNING DE CLASSIFICAÇÃO PARA O DATASET DO LINK A SEGUIR:
+
+https://www.kaggle.com/uciml/breast-cancer-wisconsin-data
+
+Esse e um dataset de um conjunto de sobre cancer de mama, nosso objetivo e prever se o cancer e benigno ou maligno usando algoritimos de machine learning vistos ate o momentos, que sao:
+1- NavieBayes
+2- SVM
+3- Regressao Logistica
+4- KNN
+5- Arvores de Decisao
+6- Random Forest
+7- XGBoost
+8- LightGBM
+9- CatBoost
+
+A resolucao deste desafio estara disponivel no repositorio no github no link: https://github.com/dyego-hcb/dyego-hcb-script-classify-dataset-kaggle-breast-cancer
