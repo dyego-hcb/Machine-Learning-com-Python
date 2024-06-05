@@ -606,4 +606,4 @@ Esse e um dataset de um conjunto de sobre cancer de mama, nosso objetivo e preve
 8- LightGBM
 9- CatBoost
 
-A resolucao deste desafio estara disponivel no repositorio no github no link: https://github.com/dyego-hcb/dyego-hcb-script-classify-dataset-kaggle-breast-cancer
+A resolucao deste desafio estara disponivel no repositorio no github no link: https://github.com/dyego-hcb/script-classify-dataset-kaggle-breast-cancer
