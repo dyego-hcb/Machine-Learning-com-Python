@@ -14,7 +14,7 @@ A Seção 2 é dedicada ao estudo detalhado da linguagem Python, suas caracterí
 
 ### Resumo
 
-Na pasta [Resumo](./Resumos/), você encontrará um **resumo detalhado** do que foi abordado nesta seção, incluindo explicações e exemplos de código que ilustram os conceitos estudados.
+Na pasta [Resumo](./Resumo/), você encontrará um **resumo detalhado** do que foi abordado nesta seção, incluindo explicações e exemplos de código que ilustram os conceitos estudados.
 
 ### Exercícios
 

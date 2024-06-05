@@ -15,6 +15,6 @@ Além das lições teóricas, o curso inclui projetos práticos que permitem apl
 
 ### Resumo
 
-Na pasta [Resumo](./Resumos/), você encontrará um resumo detalhado do que foi abordado e realizado na seção 1. Este resumo inclui todos os tópicos importantes, bem como minhas notas pessoais e pensamentos sobre o material do curso.
+Na pasta [Resumo](./Resumo/), você encontrará um resumo detalhado do que foi abordado e realizado na seção 1. Este resumo inclui todos os tópicos importantes, bem como minhas notas pessoais e pensamentos sobre o material do curso.
 
 Espero que você encontre este repositório útil e informativo. Sinta-se à vontade para explorar e aprender!

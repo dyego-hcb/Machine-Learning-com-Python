@@ -14,6 +14,6 @@ A Seção 3 é dedicada ao estudo aprofundado de estatística e probabilidade, f
 
 ### Resumo
 
-Na pasta [Resumo](./Resumos/), você encontrará um **resumo detalhado** do que foi abordado nesta seção, incluindo explicações e exemplos de código que ilustram os conceitos estudados.
+Na pasta [Resumo](./Resumo/), você encontrará um **resumo detalhado** do que foi abordado nesta seção, incluindo explicações e exemplos de código que ilustram os conceitos estudados.
 
 Espero que você encontre este repositório útil e informativo. Sinta-se à vontade para explorar e aprender!
