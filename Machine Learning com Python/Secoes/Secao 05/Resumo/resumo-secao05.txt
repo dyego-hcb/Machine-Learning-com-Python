@@ -1,0 +1,211 @@
+-- Resumo da Seção 5: Aprendizado Supervisionado: Regressão - Machine Learning com Python --
+
+Nessa secao, iremos aborda o conteudo de aprendizado supervisionado focado na regressao
+
+Supervisionada -> Regressão -> Previsão ou predição de um valor numérico.
+
+Utiliza os dados de entrada para treinar um algoritmo de Machine Learning e, assim, prever uma resposta numérica.
+
+DADOS DE ENTRADA -> ALGORITMO Aprendizagem Supervisionada -> PREVISÃO
+
+Algoritmos de Regressão:
+Regressão Linear
+Simples
+Regressão Linear Múltipla
+Árvore de decisão
+Random Forest
+Regressão com Vetores de Suporte
+XGBoost
+LightGBM
+CatBoost
+Redes Neurais Artificiais
+
+Iremos realizar testes na base boston heabilitacao da base de dados kaggle
+
+Passos para conhecer o database:
+1- Ver o cabecalho head()
+2- Ver quantos registros shape
+
+Passos para expolracao, analise e tratamento dos dados:
+1- Verificar valores faltantes isnull().sum()
+2- Analsar os tipos de atibutos dtypes
+3- Dados estatistico descibre() (Verificar se tem valores numericos estranhos como media 0, diferencas muito grandes entre o min e o max)
+4- Analise dos outliers utiliazndo bloxpots
+
+CORRELAÇÃO LINEAR
+
+Relação linear entre duas variáveis.
+Determinado através de gráficos de dispersão e do coeficiente de correlação.
+Obbjetivo e verificar qual modelo matematico criar para aquela variavel
+Observação: Correlação não é causalidade, depor exemplo se aumentar x y diminiu, nao necessariamente esta relaconado a isso.
+
+CORRELAÇÃO x CAUSALIDADE -> Nao e a causa dessa relacao
+Tem correlação, mas a variação de uma variável não é a causa da variação da outra variável.
+Deve-se avaliar bem para termos variaveis de um modelo matematigo que de um siginifiacado importante.
+
+r= n*Somatorio xy = Somatirio x * Somatorio y / Raiz x*Somatorio x² - Somatorio x ² * Raiz n*Somatorio de y² - Somatorio de y ^2
+
+Coeficiente de Correlação Linear (Coeficiente de Pearson)
+Forma mais precisa de medir a correlação entre duas grandezas.
+Teste Paramétrico (Normalidade).
+
+Coeficiente de correlação (r) | Correlação Positiva | Coeficiente de correlação (r) | Correlação Negativa
+r = 1 | Perfeita | r = - 1 | Perfeita
+0,95 ≤ r < 1 | Muito forte | -1 ≤ r < -0,95 | Muito forte
+0,8 ≤ r < 0,95 | Forte | -0,95 ≤ r < -0,8 | Forte
+0,5 ≤ r < 0,8 | Moderada | -0,8 ≤ r < -0,5 | Moderada
+0, ≤ r < 0,5 | Fraca | 0,5 ≤ r < -0,8 | Fraca
+
+Corelacoes fracas nao e recomendada para a geracao do modelo, pois nao tera muita precisao.
+
+Coeficiente de determinação (r2)
+Porcentagem da variação de y que pode ser explicada pela relação de x e y.
+Avalia a qualidade do ajuste de um modelo de regressão.
+𝑟2=𝑐 𝑜𝑒𝑓𝑖𝑐𝑖𝑒𝑛𝑡𝑒 𝑑𝑒 𝑐𝑜𝑟𝑟𝑒𝑙𝑎çã𝑜 𝑎𝑜 𝑞𝑢𝑎𝑑𝑟𝑎𝑑𝑜
+
+Validação do coeficiente de correlação
+- Se |r| > valor da tabela: coeficiente significante.
+- Se |r| ≤ valor da tabela: coeficiente não significante.
+Conclusão: Como 0,9129 > 0,707, então o coeficiente é significante.
+
+Coeficiente de correlação de postos de Spearman
+Teste Não paramétrico.
+Medida da força da relação entre duas variáveis.
+Pode ser utilizado na relação de dados lineares e também não lineares, assim como também para dados no nível ordinal.
+
+Cálculo do Coeficiente de Spearman
+n = número amostras.
+di = diferença de alcance de cada elemento.
+Coeficiente de correlação | Correlação Positiva | Coeficiente de correlação | Correlação Negativa
+rR = 1 | Perfeita | rR = - 1 | Perfeita
+0,95 ≤ rR < 1 | Muito forte | - 1 ≤ rR < -0,95 | Muito forte
+0,8 ≤ rR < 0,95 | Forte | -0,95 ≤ rR < -0,8 | Forte
+0,5 ≤ rR < 0,8 | Moderada | -0,8 ≤ rR < -0,5 | Moderada
+0 ≤ rR < 0,5 | Fraca | -0,5 ≤ rR < 0 | Fraca
+
+Coeficiente de correlação de Kendall
+Teste não paramétrico indicado para número pequeno de amostras ou para populações com grandes quantidades de empates (valores repetidos).
+Pode ser utilizado juntamente com o Spearman para comparação.
+É mais conservador que o teste de Spearman.
+
+Cálculo do Coeficiente de Kendall
+qtd de pares concordantes - quantidade de pares discordantes / n(n-1)/2
+
+Coeficiente de correlação | Correlação Positiva | Coeficiente de correlação | Correlação | Negativa
+τ = 1 | Perfeita | τ = - 1 | Perfeita
+0,95 ≤ τ < 1 | Muito forte | - 1 ≤ τ < -0,95 | Muito forte
+0,8 ≤ τ < 0,95 | Forte | -0,95 ≤ τ < -0,8 | Forte
+0,5 ≤ τ < 0,8 | Moderada | -0,8 ≤ τ < -0,5 | Moderada
+0 ≤ τ < 0,5 | Fraca | -0,5 ≤ τ < 0 | Fraca
+
+Para criar graficos de dispersao utilziza-se a lib matplotlib a funcao scatter
+Apos analisar o grafico, devemos analisar a normalidade com analise de graficos qq-plot, histogramas e estatistica shapirowilk (limitado a 5000 registros usar o liliefors caso tiver mais)
+Apos feito isso devemos analisar a correlacao linear
+
+Regressão Linear -> Aplicar os valores de correlacao
+REGRESSÃO LINEAR SIMPLES
+doc: https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html
+lib: from sklearn.linear_model import LinearRegression
+
+Na regressao verifica-se o r² de metrica, erro absoluto, erro medio absoludo, erro quadratico medio, raiz do erro quadratico medio (usado para comparar com outros modelos)
+
+fit -> realia o treino
+predict -> realiza o teste
+
+Modelo matemático linear capaz de realizar previsões.
+y=m*x+b
+
+y= variavel dependente
+m= coeficiente angular
+x= variavel dependete eixo x
+b= coeficente linear
+
+Utilizado posteriormente à análise de correlação linear.
+Equação obtida após um ajuste de um reta no gráfico de dispersão com resíduo mínimo (Linha de regressão).
+
+Linhas de regressão
+Linha que melhor se ajusta aos dados plotados, onde a soma dos quadrados dos resíduos seja mínima.
+d= valor y observado - valor y previsto
+
+Modelo Matemático (Equação da reta) -> Para obetr o valor de y, calculando com os dados em maos, basta usar a formula, mas para calcular sem os dados, precisa calcular:
+1- Coeficiente M 
+2- Coeficiente B
+
+Podeos avaliar a regressao linear simplse, usando a lib statsmodels, essa avaliacao consite em se esse algoritimo vai ser consistente, satisfatorio ou nao
+Testando os residuos se e uma distribuicao noarmal ou nao
+Outliers no residos (Entre -3 e 3)
+
+REGRESSÃO LINEAR MÚLTIPLA
+doc: https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html
+lib: from sklearn.linear_model import LinearRegression
+
+Quando possui mais de uma variável independente.
+𝑦 =𝑏0 + 𝑏1 𝑥1+ 𝑏2 𝑥2 +… +𝑏𝑛 𝑥𝑛 +𝜀(erro)
+
+Utiliza-se o método dos mínimos quadrados para estimar os coeficientes da regressão múltipla, sendo que o ideal é usar a tecnologia.
+Após a obtenção dos coeficientes e, consequentemente, a equação da regressão linear múltipla, aí sim será possível a realização das previsões.
+
+Pressupostos
+1. Relação linear entre variáveis independentes e dependentes.
+2. Sem presença de outliers na análise dos resíduos.
+3. Passar no teste de homocedasticidade.
+4. Resíduos normalmente distribuídos com média 0 e variância constante.
+5. Ausência de multicolinearidade e autocorrelação.
+
+Podeos avaliar a regressao linear simplse, usando a lib statsmodels, essa avaliacao consite em se esse algoritimo vai ser consistente, satisfatorio ou nao
+Testando os residuos se e uma distribuicao noarmal ou nao
+Outliers no residos (Entre -3 e 3)
+Multicolinariedade r>0.9
+
+REGRESSÃO POLINOMIAL
+doc: https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.PolynomialFeatures.html
+lib: from sklearn.preprocessing import PolynomialFeatures
+
+Ajuste de uma equação não linear por meio de funções polinomiais de variável independente.
+
+Ponto Crítico
+Pontos de máximo e de mínimo da função.
+Para achar o ponto critico, calcula-se a derivada de y, derivada de x e iguala a zero
+
+REGRESSÃO POR VETORES DE SUPORTE
+doc: https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVR.html
+Parametro mais importante: kernel
+Deve-se realizar a padronizacao de escala
+
+REGRESSÃO COM ÁRVORE DE DECISÃO
+doc: https://scikit-learn.org/stable/modules/tree.html#regression
+Parametros principais: profundidade e random_state
+
+REGRESSÃO COM RANDOM FOREST
+doc: https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html
+Parametros principais: n_estimators(arvores), criterion, max_depth, random_state
+
+REGRESSÃO COM XGBOOST
+doc: https://xgboost.readthedocs.io/en/latest/python/python_api.html#xgboost.XGBRegressor
+Parametros principais: n_estimators(arvores), max_depth, learning_rate, objective
+
+REGRESSÃO COM LIGHT GBM
+doc: https://lightgbm.readthedocs.io/en/latest/pythonapi/lightgbm.LGBMRegressor.html
+Parametros principais: num_leaves, max_depth, learning_Rate, n_estimators
+
+REGRESSÃO COM CATBOOST
+doc: https://catboost.ai/en/docs/concepts/python-reference_catboostregressor
+Parametros principais: iterations, learning_rate, depth, rando_state
+
+DESAFIO 2:
+DESENVOLVER E SELECIONAR O MELHOR ALGORITMO DE MACHINE LEARNING DE REGRESSÃO PARA O DATASET DO LINK A SEGUIR:
+
+https://www.kaggle.com/mirichoi0218/insurance/code
+
+OS ALGORITIMOS QUE UTILIZAREMOS SERAO:
+1- REGRESSÃO LINEAR SIMPLES
+2- REGRESSÃO LINEAR MÚLTIPLA
+3- REGRESSÃO POLINOMIAL
+4- REGRESSÃO POR VETORES DE SUPORTE
+5- REGRESSÃO COM ÁRVORE DE DECISÃO
+6- REGRESSÃO COM RANDOM FOREST
+7- REGRESSÃO COM XGBOOST
+8- REGRESSÃO COM LIGHT GBM
+9- REGRESSÃO COM CATBOOST
+
+Resolucao deste desafio estara no repositorio do github no link: https://github.com/dyego-hcb/script-regression-dataset-kaggle-medical-cost-personal
