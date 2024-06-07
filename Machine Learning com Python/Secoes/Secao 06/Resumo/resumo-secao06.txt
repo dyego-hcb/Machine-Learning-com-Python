@@ -1,0 +1,300 @@
+-- Resumo da Seção 6: Aprendizado Supervisionado com Redes Neurais Artificiais - Machine Learning com Python --
+
+Nessa secao, iremos abordar o tema de Redes Neurais em problemas de classificacao e regressao
+
+Neurônio Biológico e Artificial
+Neurônio Biológico (Célula Nervosa)
+Representação esquemática.
+Dentritos -> Contato de um neuronio com outro
+Corpo celular 
+Nucleo 
+Axonio 
+Ramofocacoes terminais do axonio
+Sentido do impulso nervoso -> Do corpo celular, por axionio e para as ramficacoes ate o outro neuronio
+
+Rede Neural Biológica -> Conjunto de neuronios intercalado
+
+Fluxo nervoso: dentritos, centro-trófico, axônio e dentrito do neurônio seguinte e assim por diante até chegar numa célula muscular ou glandular.
+Sinapse nervosa: ocorre nos contatos entre os neurônios, através dos mediadores químicos da sinapse (neurotransmissores).
+
+Transmissao comum dentritos, porem podem passa info pelo axonios, corpo celular
+
+Neurônio Artificial (Matemático)
+Sinais de Entrada -> Dentritos
+Pesos Sinapticos 
+Combinador Linear -> Somatoria do produto dos sinais de entrada com os pesos
+Funcao de Ativacao -> Ativar o sinal do neuronio
+Saida
+
+Rede Neural Artificial
+Conjunto de neurônios interligados.
+Camada de Entrada (Input) 
+Camada Oculta (Hidden Layer) 
+Camada de Saida (Output)
+
+Quando os neuronios da camada de tras ligam com todos os neuronios da camada da frente, chamamos de camada densa
+
+Rede Neural Simples -> Quanto tempos apenas uma camada escondida
+Rede Neural Profunda (Deep Learning) -> Quanto tempos apenas varias camada escondida
+
+Atributos -> Entradas
+Celulas -> Neuronios
+
+Redes Neurais
+https://www.asimovinstitute.org/neural-network-zoo/
+
+Principais redes
+Redes Multilayer Perceptron (classificação binária).
+Redes Neurais Convolucionais (classificar imagens).
+Redes Neurais Recorrentes (processamento de dados sequenciais, como som, dados de séries temporais ou linguagem natural).
+Long Short-Term Memory (LSTM): variação da rede recorrente.
+Redes de Hopfield (armazenar memórias).
+Máquinas de Boltzmann (rede neural recorrente estocástica aleatoridade).
+Deep Belief Network (reconhecer, agrupar, gerar imagens, vídeos, dados de captura de movimento e processamento de linguagem natural).
+Deep Auto-Encoders (reduzir a dimensionalidade).
+Generative Adversarial Network (imita qualquer distribuição de dados)
+Deep Neural Network Capsules (maior expansão de Deep Learning).
+
+Perceptron de uma camada
+Algoritmo mais simples de uma rede neural que pode ser usado para a classificação de padrões que sejam linearmente separáveis.
+
+Linearmente separaveis -> Quando uma linha reta separa tipos de dados
+Nao Linearmente separaveis -> Quando uma linha nao reta separa os tipos de dado
+
+Perceptron de uma camada
+Modelo matemático com mais de uma entrada e uma saída binária.
+Sinais de Entrada 
+Pesos Sinapticos 
+Bias 
+Combinador Linear 
+Funcao de Ativacao -> se o u >= 0 1 se u < 0 0
+Saida
+
+Bias (Viés): aumenta o grau de liberdade dos ajustes dos pesos.
+
+Redes Multilayer Perceptron (MLP)
+Todos os neurônios são ligados aos neurônios da camada subsequente, não havendo ligação com os neurônios laterais.
+Usado para a classificação de padrões que sejam não linearmente separáveis.
+
+Camada de Entrada (Input) ->
+Camada Oculta (Hidden Layer) ->
+Camada de Saida (Output) ->
+
+Processo de construção de uma rede neural
+1) Função de ativação
+2) Algoritmo de aprendizagem
+3) Topologia da rede
+
+Função de ativação
+Permite que pequenas alterações no peso e bias resultem em pequenas modificações no resultado de saída.
+Decide se o neurônio será ativado. Filtra se a informação é relevante.
+Possibilita resoluções de problemas complexos, não lineares.
+Existem várias funções de ativação e a escolha correta para cada aplicação é fundamental para atingir ótimos resultados.
+
+Principais de Funções de Ativação
+1) Função de etapa Binária (Binary Step Function) ou função degrau ou função de Heaviside.
+
+Utilizada para classificador binário.
+ϕ(x) = 1 para x ≥ 0
+ϕ(x) = 0 para x < 0
+
+2) Função Linear
+Obedece a função: ϕ(x) = a.x + b
+
+3) Função Sigmóide
+Funcionam melhor em classificadores.
+Limitada a duas classes (atributo de saída).
+Muito utilizado nos algoritmos
+
+4) Função tanh (tangente hiperbólico)
+Similar a função sigmóide, mas simétrico à origem.
+
+5) Função ReLu
+Muito utilizada.
+Não ativa todos os neurônios ao mesmo tempo.
+Deve ser usada apenas nas camadas ocultas.
+Normalmente é a primeira a ser testada.
+
+6) Função Leaky ReLu
+Evolução da função ReLU
+
+7) Função Softmax
+Utilizada em problemas de classificação.
+Sem limitação no número de classes (diferente da função sigmóide).
+
+Aprendizagem nas redes neurais artificiais
+Conjunto de regras ou procedimentos que adaptam ou ajustam os parâmetros (intensidades das conexões entre neurônios, pesos associados às sinapses e nível de bias) para que a rede possa aprender uma determinada função e melhorar seu desempenho.
+
+Tipos de Aprendizagens
+Supervisionada (conjunto de dados com entrada e saida definidos).
+Não supervisionada (conjunto de dados sem saida definida).
+Reforço (aprende com os erros).
+
+Processo de Aprendizagem
+Rede neural tem a capacidade de aprender e de melhorar seu desempenho por meio da aprendizagem.
+As regras de aprendizagem definem como a rede deve ajustar os pesos sinápticos.
+Existem quatro tipos de regras de aprendizagem:
+1) Correção de Erro.
+2) Hebbiana.
+3) Boltzmann.
+4) Competitiva.
+
+Todos os dados devem estar em numerico
+Analisa a matriz de confusao para verificar a acertividade
+
+1) Regra por Correção de Erro:
+Ajusta os pesos sinápticos por meio do erro, que é obtido através da diferença entre o valor de saída da rede e o valor esperado em um ciclo de treinamento. Com isso gradualmente vai diminuindo o erro geral da rede.
+
+2) Regra Hebbiana:
+Postulado de Heb: “Se dois neurônios em ambos os lados de uma sinapse são ativados sincronamente e simultaneamente, então a força daquela sinapse é seletivamente aumentada”.
+
+3) Regra de Boltzmann:
+Procedimento de aprendizagem não-supervisionado para modelar uma distribuição de probabilidade.
+Dois estados possíveis: ligado (+1) e desligado (-1).
+Neurônios possuem conexões bidirecionais.
+
+4) Regra Competitiva:
+Neurônios são forçados a competir entre si e somente um será ativo, ou seja, o que tiver maior similaridade com o padrão de entrada.
+Todos os pesos dos neurônios próximos ao neurônio vencedor terão seus valores ajustados.
+
+Aprendizagem com descida do gradiente
+Descida do gradiente: algoritmo que tem por objetivo encontrar o ponto de mínimo de uma função.
+Uma função pode ter vários pontos de mínimo (mínimos locais e globais) e o objetivo é encontrar o mínimo global.
+
+Gradiente
+Vetor cujo módulo é a derivada direcional máxima (sentido da maior variação).
+Aponta para onde a grandeza resultante da função tem seu maior crescimento.
+
+Vetor 
+Modulo: Tamanho intensidade
+Direção: horizontal.
+Sentido: para direita.
+Derivada: taxa de variação instantânea entre grandezas (variáveis). dy/dx -> Formula variacao de y variacao de x
+
+É utilizado para encontrar o mínimo de uma função de erro (eixo y) (função de perda – loss function ou função de custo - cost function) quando aplicado a algoritmos de aprendizagem de máquina
+
+Evolução do algoritmo de descida do gradiente
+SGD (Stochastic Gradient Descent): Descida de Gradiente Estocástica. Aumenta o número de atualizações nas interações (todos os dados atualizam pesos). Evita erro no mínimo local, mas tem excesso de atualizações.
+
+SGD Mini-batch: Descida de Gradiente estocástica com mini lotes. Esse é o algoritmo principal da descida do gradiente. Diminui o número de atualizações e aumenta a velocidade de processamento.
+
+Momento (Momentum): Técnica para aumentar a velocidade do algoritmo de descida do gradiente, reduzir instabilidades e evitar mínimos locais. Seu valor varia de 0 (não utilização) a 1. O valor recomendado para o termo momentum é 0.3.
+
+Busca-se encontrar o erro minimo.
+
+Topologias das redes neurais
+Disposição dos neurônios na rede, como são estruturados. A topologia da rede está diretamente ligada ao tipo de algoritmo de aprendizagem utilizado.
+Existem três topologias:
+1) Redes alimentadas adiante (Feed forward networks).
+2) Redes Recorrentes (Feed backward networks)
+3) Redes Competitivas.
+
+Redes Alimentadas Adiante (Feed-forward networks)
+Forma de camadas.
+
+Camada de Entrada -> Camada Oculta -> Camada de Saida
+
+Neurônios em conjuntos distintos e ordenados sequencialmente.
+Nas redes alimentadas adiante, o fluxo de informação é sempre da camada de entrada para a camada de saída.
+
+Redes Recorrentes
+Ocorrência de realimentacão.
+
+Redes Competitivas
+Neurônios estão divididos em duas camadas, a camada de entrada (fonte) e a camada de saída (grade).
+Neurônios da grade são forçados a competir entre si e somente o neurônio vencedor será ativado, os neuronios sao agrupados para a verificacao de quem e o vencedor, cada grupo com suas caracteristicas.
+A rede mais conhecida é a rede de Kohonen (Mapa Auto-Organizável)
+
+Redes Multilayer Perceptron (MLP)
+Redes Alimentadas Adiante.
+Todos os neurônios são ligados aos neurônios da camada subsequente, não havendo ligação com os neurônios laterais.
+O principal algoritmo de treinamento é o de retropropagação de erro (error backpropagation).
+
+Algoritmo backpropagation (retropropagação)
+Sentindo inverso do forward propagation para ajustar os pesos.
+Algoritmo mais importante das redes neurais.
+Aumenta a velocidade consideravelmente da descida do gradiente, calculando rapidamente as derivadas.
+Imprescindível para o Deep Learning.
+
+Feed-forward networks -> Camada de Entrada -> Camada Oculta -> Camada de Saida
+Backpropagation -> Camada de Saida -> Camada Oculta -> Camada de Entrada (faz recalculando os pesos)
+
+Definição dos hiperparâmetros
+Pequenas diferenças nos parâmetros podem levar a grandes diferenças no tempo de treinamento e nos resultados.
+Sugestões:
+1º) Número de camadas ocultas
+Não exagerar no número de camadas ocultas. Normalmente duas já atingem resultados excelentes.
+Para conjunto de dados pequenos e não muito complexos normalmente uma camada oculta já é suficiente.
+Mais de duas camadas são para problemas complexos, como visão computacional.
+
+2º) Número de neurônios nas camadas ocultas:
+Neurônios em excesso causam overfitting (memorização dos dados de treinamento, ótimo resultado com os dados de treinamento e resultados ruins com os dados de teste).
+Falta de neurônios causam underfitting (modelo não consegue encontrar relações com os dados, os resultados já são ruins com os dados de treinamento).
+
+Quantidade de neurônios = neuronios entrada + neuronios saida / 2 
+Quantidade de neurônios = 2 * neuronios entrada / 3 + neuronios saida 
+
+3º) Taxa de aprendizagem
+Taxa muito baixa torna o aprendizado da rede muito lento.
+Taxa muito alta provoca oscilações no treinamento.
+Geralmente seu valor varia de 0,1 a 1.
+Sugestão: utilizar 0,4.
+
+4º) Momento
+Objetivo de aumentar a velocidade de treinamento da rede e reduzir o perigo de instabilidade.
+A utilização é optativa.
+Valor varia de 0 (não utilização) a 1.
+Valor recomendado é 0,3.
+
+5º) Parada de treinamento por número de ciclos
+Número de ciclos: o número de vezes em que o conjunto de treinamento é apresentado à rede.
+Excesso de ciclos causa overfitting.
+Número pequeno de ciclos causa underfitting.
+Sugere-se um valor entre 500 e 3000 ciclos de treinamento
+
+6º) Parada de treinamento por erro
+Encerra o treinamento após o erro quadrático médio ficar abaixo de um valor pré-definido.
+Sugestão é estabelecer um valor de 0,01 no primeiro treinamento e depois ajustá-lo em função do resultado.
+
+Classificacao com Redes Neurais Artificiais
+lib: from sklearn.neural_network import MLPClassifier
+
+Parâmetros MLPClassifier
+
+hidden_layer_sizes (camadas escondidas): default (100,)
+Quant.= (Ne+Ns)/2 = (11+1)/2 = 6 neurônios
+Quant.=2/3.(Ne) + Ns = 2/3.11+1 = 8 neurônios
+activation: Função de ativação default='relu'
+solver: algoritmo matemático. Default='adam' (datasets grandes = acima de 1000 amostras). lbfgs é para datasets pequenos. sgd é com a descida do gradiente estocástico (recomendado testar).
+alpha: parâmetro para o termo de regularização de ajuste de pesos. Aumento de alpha estimula pesos menores e diminuição de alpha estimula pesos maiores. Default=0.0001.
+batch_size: tamanho dos mini lotes. default=min(200, n_samples). Não usar com o solver lbfgs.
+learning_rate: taxa de aprendizagem. default='constant'. Três tipos:
+1- 'constant':uma taxa de aprendizado constante dada pela taxa de aprendizagem inicial.
+2- 'invscaling': diminui gradualmente por: taxa efetiva = taxa inicial / t^power_t
+3- 'adaptive': a taxa é dividida por 5 cada vez que em duas épocas consecutivas não diminuir o erro.
+learning_rate_init: taxa de aprendizagem inicial. Default=0.001
+max_iter int: Número máximo de iterações. default = 200. ('sgd', 'adam').
+max_fun: Número máximo de chamadas de função de perda. Para 'lbfgs'. Default: 15000
+shuffle: default = True Usado apenas quando solver = 'sgd' ou 'adam'.
+random_state: default = None
+tol:Tolerância para a otimização.Default=0.0001
+momentum: otimização do algoritmo 'sgd'. Default: 0.9.
+n_iter_no_change: Número máximo de épocas que não atinge a tolerância de melhoria. default = 10. Apenas para solver = 'sgd' ou 'adam'
+verbose : Mostra o progresso. default=False.
+
+Desafio 03:
+DESENVOLVER UM ALGORITMO DE REDES NEURAIS ARTFICIAIS DE CLASSIFICAÇÃO PARA O DATASET DO LINK A SEGUIR:
+
+https://www.kaggle.com/uciml/breast-cancer-wisconsin-data
+
+Resolucao do desafio 03 esta no repositorio no github no link: https://github.com/dyego-hcb/script-classify-dataset-kaggle-breast-cancer
+
+Regressao Linear com Redes Neurais Artificiais
+lib: from sklearn.neural_network import MLPRegressor
+
+Desafio 04:
+DESENVOLVER UM ALGORITMO DE REDES NEURAIS ARTFICIAIS DE REGRESSÃO PARA DATASET DO LINK A SEGUIR:
+
+https://www.kaggle.com/mirichoi0218/insurance/code
+
+Resolucao do desafio 04 esta no repositorio no github no link: https://github.com/dyego-hcb/script-regression-dataset-kaggle-medical-cost-personal
