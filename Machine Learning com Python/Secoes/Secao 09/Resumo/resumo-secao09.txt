@@ -1,0 +1,39 @@
+-- Resumo da Seção 9: Aprendizagem por Reforço - Machine Learning com Python --
+
+Nessa secao iremos abordar o tema de aprendizagem por reforco.
+
+APRENDIZAGEM POR REFORÇO
+Aprendizado para tomar uma sequência de decisões até atingir uma meta sem ter parâmetros de referência.
+O aprendizado se dá por tentativa e erro.
+O agente percebe se está certo quando recebe uma recompensa e se está errado quando recebe uma punição.
+Isto é, aprende tanto com erros como com acertos, assim como o ser humano.
+
+Algumas Aplicações
+- Jogos
+- Robótica
+- Mercado Financeiro
+- Aperfeiçoamento de carros autônomos
+- Preços dinâmicos e personalizados
+- Definição de estratégias para tratamento de doenças
+
+Nomenclaturas
+1) Agente: Entidade que irá aprender (software e/ou hardware)
+2) Ambiente: espaço de ação do agente (físico ou virtual).
+3) Estado (s): situação atual do agente e ambiente.
+4) Política (π): estratégia para a próxima ação.
+5) Recompensa (r): referência para o agente sobre a sua ação.
+
+Principais Algoritmos
+
+Aprendizagem por reforco -> Q-Learning -> Estabelece de forma autonoma, acoes de maneira interativa
+Aprendizagem por reforco -> Sarsa -> Similar ao Q-Learning, mas obedece outra funcao matematica
+Aprendizagem por reforco -> Q -> Registros temporarios da ocorrencia de um evento
+
+Lógica da Aprendizagem -> temos um agente que toma uma acao, e estarr em um estado o agente recebe uma recompensa e analisa qual a proxima acao 
+Utiliza o modelo matemático Markov Decision Process (MDP) -> agente guarda info
+
+Equação de Bellman
+α = taxa de aprendizagem
+ɤ = fator de desconto. 
+
+Cria tabela Q com os valores da equacao de bellman
