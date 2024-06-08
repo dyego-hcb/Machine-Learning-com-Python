@@ -1,0 +1,34 @@
+-- Resumo da Seção 8: Aprendizado Não Supervisionado: Regras de Associação - Machine Learning com Python --
+
+REGRAS DE ASSOCIAÇÃO
+
+Aprendizagem Não Supervisionada.
+Objetiva encontrar relacionamentos e padrões entre elementos pertencentes ao conjunto de dados.
+Aplicações:
+– Campanhas de marketing.
+– Controlar estoque de lojas.
+– Descrever falhas em linhas de comunicação.
+– Ações na interface do usuário.
+– Ocorrências de doenças recorrentes
+
+http://each.uspnet.usp.br/sarajane/wp-content/uploads/2015/11/associacao.pdf
+
+Suporte: Frequência em que ocorrem juntos.
+Confiança: Probabilidade de ocorrerem juntos.
+Lift: Indica o grau da associação.
+
+Alavancagem (Leverage): mede a diferença de X e Y aparecendo juntos no conjunto de dados.
+Convicção (Conviction): nível de dependência do consequente com relação ao antecedente.
+
+ALGORITMOS
+APRIORI: Utiliza conjuntos de itens frequentes para gerar regras de associação.
+Obs.: Conjunto de itens frequentes é um conjunto de itens cujo valor de suporte é maior que um valor limite.
+
+ECLAT: É uma versão derivada do algoritmo Apriori, com abordagem de associação que o torna mais rápido.
+Utiliza somente o suporte e não gera regras, utiliza somente os itens frequentes.
+lib: pyECLAT
+
+DESAFIO 06:
+Desenvolver os algoritmos Apriori e Eclat utilizando o Exemplo 2 disponível na biblioteca pyECLAT.
+
+A resolucao deste desafio esta no repositorio do github no link: https://github.com/dyego-hcb/script-clustering-dataset-kaggle-wine/blob/main/.gitignore
