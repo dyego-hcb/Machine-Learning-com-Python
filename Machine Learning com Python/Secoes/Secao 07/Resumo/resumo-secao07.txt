@@ -1,0 +1,136 @@
+-- Resumo da Seção 7: Aprendizado Não Supervisionado: Agrupamento - Machine Learning com Python --
+
+Nessa secao, iremos abordar o topico de agrupamento.
+
+Não supervisionada -> Agrupamento (Clustering) -> Agrupar dados por características (idade, gostos...)
+
+Agrupamento (Clustering)
+Aplicado em problemas de aprendizagem não supervisionada.
+Realiza agrupamento de dados com base em características similares.
+Exemplos:
+- Identificação de perfis de clientes.
+- Segmentação de produtos semelhantes.
+- Agrupamento de sintomas característicos de doenças.
+- Perfis nos streaming (Netflix, Spotify, Globoplay…)
+
+Visão Geral dos Métodos de Agrupamento: Existem varios metodos, como k-means, dbscan, etc
+
+Por boas praticas, devemos alterar os nomes das colunas quando os nomes tiverm espaco, acentuacao, etc.
+Sempre colocar os nomes das colunas igual variaveis em programacao
+
+Algoritmo K-Means
+https://www.ml-science.com/k-means-clustering
+doc: https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html
+lib: from sklearn.cluster import KMeans
+
+Utiliza a distância Euclidiana para definir os grupos
+
+Definição do número de Clusters
+Elbow Method
+Testa vários valores de k.
+Define o número de clusters através do ponto de inflexão no gráfico do WCSS (Within Clusters Sum of Squares) em função do número de clusters.
+
+Técnica básica do agrupamento K-Means -> Cria centroids quais os pontos que pertencem ao seu grupo, depois eles sao realocados para o centro de seus grupos, quando atinge o equilibrio finaliza
+Algoritmo K-Means++ Evita centroides em posições ruins
+
+Pametros principais: n_clusters, init
+Para gerar os valores WCSS pega o resultado de kmeans.ineratia_
+
+OBS: PCA >= 0.8
+
+Agrupamento Hierárquico (Agglomerative Hierarchical Clustering)
+doc: https://scikit-learn.org/stable/modules/generated/sklearn.cluster.AgglomerativeClustering.html
+lib: from scipy.cluster.hierarchy import dendrogram, linkage
+
+Aplicado em problemas de aprendizagem não supervisionada.
+Busca construir uma hierarquia de grupos, de forma aninhada, mesclando-os ou dividindo-os sucessivamente.
+Esquematizada como forma de uma árvore e representada graficamente através de um dendrograma.
+A raiz da árvore reúne todas as amostras, sendo as folhas com apenas uma amostra.
+
+Dendograma por distância
+Dendograma por similaridade
+
+Os dendogramas sao importantes para definir quantos cluters teremos no dendograma.
+
+TIPOS DIFERENTES DE LIGAÇÕES
+Ligação única (single): a distância entre dois clusters é a mínima distância entre observações de pares de clusters.
+Ligação completa (complete): a distância entre dois clusters é a máxima distância entre observações de pares de clusters.
+Ligação média (average): a distância clusters é a distância média entre cada ponto em um cluster para cada particular em outro.
+Ward: A distância entre clusters é a soma das diferenças quadradas em todos os clusters.
+
+Single Linkage (vizinhos mais próximos)
+
+Complete Linkage (vizinhos mais distantes)
+
+DBSCAN (Density-Based Spatial Clustering of Applications with Noise)
+doc: https://scikit-learn.org/stable/modules/generated/sklearn.cluster.DBSCAN.html
+lib: from sklearn.cluster import DBSCAN
+
+Agrupamento Espacial de Aplicações com Ruído Baseado em Densidade(Concentraco).
+Mais rápido que o Kmeans e o hierárquico.
+Trabalha muito bem com outliers.
+Bom para dados que contêm clusters de densidade semelhante.
+Encontra amostras centrais de alta densidade e expande clusters a partir delas.
+
+Requer dois parâmetros:
+ε (eps): raio de alcance.
+min_samples: quantidade mínima de pontos necessários para
+formar um cluster.
+
+Começa com um ponto de partida aleatório.
+Se a vizinhança ε desse ponto contiver pontos suficientes, um cluster é iniciado. Caso contrário, o ponto é rotulado como ruído.
+
+Vantagens
+Não exige especificação do número de clusters.
+Pode encontrar clusters de formato arbitrário.
+É robusto a outliers.
+Requer apenas dois parâmetros.
+Mais rápido.
+
+Desvantagens
+Pode não agrupar bem conjuntos de dados com grandes diferenças de densidades.
+Pode ser difícil escolher um limite de distância (ε) adequado.
+
+MeanShift (Deslocamento médio)
+doc: https://scikit-learn.org/stable/modules/generated/sklearn.cluster.MeanShift.html
+lib: from sklearn.cluster import MeanShift
+
+Agrupamento para problemas de aprendizagem não supervisionada.
+Atribui os pontos aos clusters de forma interativa.
+Não necessita indicar o número de clusters.
+Busca região de maior densidade.
+Aplicado em processamento de imagens e visão computacional.
+
+Centro de Messa -> Onde tem a maior concentrassao de pontos (ponto de equilibrio)
+Regiao de Interesse -> Regiao aleatorio selecionado
+Vetor de media de deslocamento -> Deslocamento da regiao de interesse ate chegar no ponto de equilibrio
+
+Vantagens
+Encontra um número variável de regiões densas.
+Robusto para outliers.
+Não assume nenhuma forma (esférica, elíptica, quadrada…) nos clusters de dados.
+Utiliza apenas um único parâmetro (bandwich - largura da banda ou janela).
+
+Desvantagens
+A saída depende do tamanho da janela (largura da banda).
+A seleção do tamanho da janela não é trivial.
+Computacionalmente caro.
+
+DESAFIO 5:
+DESENVOLVER E SELECIONAR O MELHOR ALGORITMO DE MACHINE LEARNING DE AGRUPAMENTO PARA O DATASET DO LINK A SEGUIR:
+METODOS:
+1- K-MEANS COM 2 ATRIBUTOS
+2- K-MEANS COM TODOS ATRIBUTOS
+3- K-MEANS COM PCA
+4- HIERAQUICO COM PCA
+5- HIERARQUICO COM TODOS OS ATIBUTOS
+6- DBSCAN COM PCA
+7- DBSCAN COM TODOS OS ATRIBUTOS
+8- MEANSHIFT COM PCA
+9- MEANSHIF COM TODOS OS ATRIBUTOS
+10- K-PROTOTYPES
+
+https://www.kaggle.com/harrywang/wine-dataset-for-clustering
+
+Resolucao deste desafio esta no repositorio no link: https://github.com/dyego-hcb/script-clustering-dataset-kaggle-wine
+

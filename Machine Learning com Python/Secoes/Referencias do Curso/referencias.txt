@@ -1,0 +1,65 @@
+Referências Bibliográficas
+
+
+LARSON, Ron. Estatística Aplicada. São Paulo: Pearson Prentice Hall, 2010.
+
+SUTSKEVER, I., MARTENS, J., HINTON, G., “Generating Text With Recurrent
+
+Neural Networks”. In: 28 International Conference on Machine Learning, Bellevue, WA, USA, 2011.
+
+Perceptrons. An Introduction to Computational Geometry. MARVIN MINSKY and SEYMOUR PAPERT. M.I.T. Press, Cambridge, Mass., 1969.
+
+Deep Learning Book. Disponível em http://deeplearningbook.com.br/ . Acesso 02 de fevereiro de 2020.
+
+
+Links Úteis
+
+
+https://medium.com/@msremigio/m%C3%A1quinas-de-vetores-de-suporte-svm-77bb114d02fc
+
+https://towardsdatascience.com/understanding-support-vector-machine-part-1-lagrange-multipliers-5c24a52ffc5e
+
+https://chrisalbon.com/code/machine_learning/support_vector_machines/svc_parameters_using_rbf_kernel/
+
+https://anderfernandez.com/en/blog/code-logistic-regression-r-from-scratch/
+
+https://www.researchgate.net/figure/A-k-nearest-neighbor-KNN-classifier-KNN-is-explained-as-follows_fig1_318096864
+
+https://medium.com/machine-learning-beyond-deep-learning/%C3%A1rvores-de-decis%C3%A3o-3f52f6420b69
+
+https://www.maxwell.vrac.puc-rio.br/7587/7587_4.PDF
+
+https://www.tibco.com/reference-center/what-is-a-random-forest
+
+https://www.datageeks.com.br/xgboost/
+
+https://medium.com/@pushkarmandot/https-medium-com-pushkarmandot-what-is-lightgbm-how-to-implement-it-how-to-fine-tune-the-parameters-60347819b7fc
+
+https://www.kaggle.com/samratp/boston-housing-prices-evaluation-validation
+
+https://github.com/albertoivo/boston-house-price-mlnd/blob/master/boston_housing_PT.ipynb
+
+https://scikit-learn.org/stable/modules/clustering.html
+
+https://towardsdatascience.com/dbscan-algorithm-complete-guide-and-application-with-python-scikit-learn-d690cbae4c5d
+
+https://www.kaggle.com/khotijahs1/k-means-clustering-of-iris-dataset
+
+https://www.kaggle.com/shwetabh123/mall-customers
+
+https://www.kaggle.com/aliderakhshesh/combination-of-pca-kmeans
+
+https://acervolima.com/ml-explicacao-do-agrupamento-optics/
+
+https://dcm.ffclrp.usp.br/~augusto/teaching/ami/AM-I-Regras-Associacao.pdf
+
+
+OTIMIZAÇÃO (AJUSTE) HIPERPARÂMETROS
+
+https://aws.amazon.com/pt/what-is/hyperparameter-tuning/
+
+https://medium.com/data-hackers/otimizando-os-hiperpar%C3%A2metros-621de5e9be37
+
+CURSO:
+
+https://www.udemy.com/course/machine-learning-otimizacao-de-hiperparametros-com-python/?referralCode=849C2DC91D5D27790836 
